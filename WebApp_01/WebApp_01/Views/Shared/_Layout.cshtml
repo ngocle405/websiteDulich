@@ -1,0 +1,1200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp_01</title>
+
+    <link rel="image_src" href="/tour/vnt_upload/File/Image/anh-dai-dien-dlvn-tour.jpg" />
+    <link rel="SHORTCUT ICON" href="/tour/vnt_upload/File/Image/favicon-LHV-png.png" type="image/x-icon" />
+    <link rel="icon" href="/tour/vnt_upload/File/Image/favicon-LHV-png.png" type="image/gif" />
+    <link href="https://dulichvietnam.com.vn/tour/js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/skins/default/fontawesome/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/jquery_alerts/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/alertifyjs/css/alertify.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/alertifyjs/css/themes/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/js/jquery_ui_custom/jquery-ui.css" type="text/css" rel="stylesheet" />
+    <link href="https://dulichvietnam.com.vn/tour/js/menu/menu.css" type="text/css" rel="stylesheet" />
+   
+
+    <link href="~/fontawesome-free/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://dulichvietnam.com.vn/tour/js/mscrollbar/jquery.mCustomScrollbar.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://dulichvietnam.com.vn/tour/js/chosen/bootstrap-chosen.css" type="text/css" />
+    <link href="https://dulichvietnam.com.vn/tour/skins/default/style/screen.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/jquery_alerts/jquery.alerts.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/alertifyjs/alertify.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/jquery_validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/jquery_ui_custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/menu/menu.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/mscrollbar/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/chosen/chosen.js"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/core.js?v=1.0"></script>
+    <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/javascript.js?v=1.0"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-102013858-48"></script>
+
+    <!-- Google Tag Manager -->
+
+</head>
+<body>
+
+    <div id="vnt-wrapper">
+        <div id="vnt-container">
+            <!--=== BEGIN: HEADER ===-->
+
+
+            <div id="vnt-header">
+                <div class="wrapper">
+                    <div class="menu_mobile show_left menu_2">
+                        <div class="icon_menu"><span class="style_icon"></span></div>
+                    </div>
+                    <div class="vnt-logo">
+                        <a title='Du Lịch Việt Nam - Chuyên Tour Du Lịch Trong &amp; Ngoài Nước'><img src='https://dulichvietnam.com.vn/tour/vnt_upload/weblink/logo-dlvn-tour-250x70.png' alt='Du Lịch Việt Nam - Chuyên Tour Du Lịch Trong &amp; Ngoài Nước' /></a><h1 style="display: none">Du Lịch Việt Nam - Chuyên Tour Du Lịch Trong &amp; Ngoài Nước</h1>
+
+                    </div>
+
+                    <div class="mb-search hide-on-biggest">
+                        <div class="icon-search"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="vnt-tool">
+
+                        <div class="tool-left">
+                            <div class="vnt-search">
+                                <!--===BEGIN: FORM SEARCH==-->
+                                <div class="formsearch">
+                                    <form id="formsearch" name="formSearch" method="POST"
+                                          action="https://dulichvietnam.com.vn/tour/tour.html" class="box_search">
+                                        <div class="title-form-search"><i class="fa fa-search"></i></div>
+                                        <div class="wrap-form-search">
+                                            <div class="input-group">
+                                                <input name="keyword" id="keyword" type="text"
+                                                       class="text_search form-control" placeholder="Nhập từ khóa tìm kiếm"
+                                                       value="">
+                                                <div class="input-group-btn">
+                                                    <button id="do_submit" name="do_submit" type="submit" class="btn"
+                                                            value="">
+                                                        <span><i class="fas fa-search"></i></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <input name="do_search" value="1" type="hidden">
+                                            <div class="clear"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--===END: FORM SEARCH==-->
+                            </div>
+                        </div>
+                        <div class="tool-right hide-on-small">
+                            <div class="header-menu">
+                                <ul>
+                                    <li class="">
+                                        <a href="https://dulichvietnam.com.vn/tour/"
+                                           target="_blank"><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/icon_visa16.png" alt="Tour du lịch"> Tour du lịch</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichgolf.com.vn/tour/"
+                                           target="_blank" "=" "><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/golf-icon16x16.png" alt="Tour Golf"> Tour Golf</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichduthuyen.com.vn/tour/"
+                                           target="_blank" "=" "><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/du-thuyen-icon16x16.png" alt="Du thuyền">
+                                            Du
+                                            thuyền
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://hotel.dulichvietnam.com.vn/"
+                                           target="_blank" "=" "><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/icon_khach-san.png" alt="Đặt khách sạn">
+                                            Đặt khách
+                                            sạn
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://visadulich.com.vn/" target="_blank" "=" "><img src="
+                                           https: //dulichvietnam.com.vn/tour/vnt_upload/weblink/icon_visa16.png"> Visa, hộ chiếu</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichhangkhong.com.vn/"
+                                           target="_blank" "=" "><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/icon-ve-may-bay.png" alt="Vé máy bay">
+                                            Vé máy
+                                            bay
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichvietnam.com.vn/tour/#"
+                                           target="_blank" "=" "><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/ticket-icon16x16.png" alt="Vé, ăn &amp; chơi">
+                                            Vé,
+                                            ăn &amp; chơi
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichvietnam.com.vn/tour/#"
+                                           target="_self" "=" "><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/bus-icon.png" alt="Xe, vận chuyển">
+                                            Xe, vận
+                                            chuyển
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-fixed-menu hide-on-small">
+                <div class="fixed-menu">
+                    <div class="wrapper">
+                        <div class="vnt-menutop">
+                            <ul>
+                                <li class=" current">
+                                    <a href="https://dulichvietnam.com.vn/tour/" target="_self"
+                                       class="current"><i class="fas fa-home"></i></a>
+                                </li>
+                                <li class=" submenu">
+                                    <a href="https://chungtoi.dulichvietnam.com.vn/" target="_blank">
+                                        Về
+                                        chúng tôi
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://chungtoi.dulichvietnam.com.vn/giay-phep-lhqt/trung-tam-lu-hanh/"
+                                               target="_self">Hoàng Việt Open</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dulichvietnam.com.vn/tour/shd-travel-da-nang.html"
+                                               target="_self">SHD travel Đà Nẵng</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dulichvietnam.com.vn/tour/lu-hanh-viet-nam.html"
+                                               target="_self">Lữ Hành Việt Nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://dulichvietnam.com.vn/tour/cach-dat-cho.html"
+                                       target="_self">Hướng dẫn đặt tour</a>
+                                </li>
+                                <li class=" current submenu">
+                                    <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html" target="_self"
+                                       class="current">LỊCH KHỞI HÀNH</a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=1&amp;destination=0&amp;cat_id=0"
+                                               target="_self">Lịch khởi hành từ Hà Nội</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=2&amp;destination=0&amp;cat_id=0"
+                                               target="_self">Lịch khởi hành từ Tp HCM</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=3&amp;destination=0&amp;cat_id=0"
+                                               target="_self">Lịch khởi hành từ Đà Nẵng</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=39&amp;destination=0&amp;cat_id=0"
+                                               target="_self">Lịch khởi hành từ Hải Phòng</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://dulichvietnam.com.vn/tour/cach-thanh-toan.html"
+                                       target="_self">Hướng dẫn thanh toán</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://dulichvietnam.com.vn/tour/dieu-khoan.html"
+                                       target="_self">Điều kiện &amp; điều khoản</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://dulichvietnam.com.vn/tour/hoi-dap.html" target="_self">
+                                        Hỏi
+                                        &amp; đáp
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="https://dulichvietnam.com.vn/tour/lien-he.html"
+                                       target="_self">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--=== END: HEADER ===-->
+            <!--=== BEGIN: CONTENT ===-->
+            @RenderBody()
+            <!--=== END: CONTENT ===-->
+            <!--=== BEGIN: FOOTER ===-->
+            <div id="vnt-footer">
+                <div class="footer-main">
+                    <div class="wrapper">
+                        <div class="row cel-p10">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="mb30">
+                                    <div class="link-tour-footer">
+                                        <div class="link-title">NỘI ĐỊA</div>
+                                        <ul>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/mien-bac.html">Miền Bắc</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/ha-noi.html">Hà Nội</a></li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/sapa.html">Sapa</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/can-tho.html">Cần Thơ</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/ha-giang.html">Hà Giang</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/vinh-phuc.html">Vĩnh Phúc</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/hai-phong.html">Hải Phòng</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/vinh.html">Vinh</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/yen-bai.html">Yên Bái</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/moc-chau.html">Mộc Châu</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/cao-bang.html">Cao Bằng</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/son-la.html">Sơn La</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/tour-ha-long.html">
+                                                    Hạ
+                                                    Long
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/ha-nam.html">Hà Nam</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/ninh-binh.html">Ninh Bình</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/thanh-hoa.html">Thanh Hóa</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/quang-binh.html">
+                                                    Quảng
+                                                    Bình
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/hue.html">Huế</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/khanh-hoa.html">Khánh Hòa</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/da-nang.html">Đà Nẵng</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/binh-dinh.html">Quy Nhơn</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/phu-yen.html">Phú Yên</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/tour-nha-trang-1627959473.html">
+                                                    Nha
+                                                    Trang
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/phan-thiet.html">
+                                                    Phan
+                                                    Thiết
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/lam-dong.html">Đà Lạt</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/dak-lak.html">
+                                                    Buôn Mê
+                                                    Thuột
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/tp-ho-chi-minh.html">
+                                                    Hồ Chí
+                                                    Minh
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/phu-quoc.html">Phú Quốc</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/con-dao.html">Côn Đảo</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/mien-tay.html">Miền Tây</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/bac-kan.html">Bắc Kạn</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/hoa-binh.html">Hòa Bình</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/quang-nam.html">Hội An</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/kien-giang.html">
+                                                    Kiên
+                                                    Giang
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/lang-son-1614842392.html">
+                                                    Lạng
+                                                    Sơn
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/lao-cai-1614842336.html">
+                                                    Lào
+                                                    Cai
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/long-an.html">Long An</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/ly-son-1626245238.html">
+                                                    Lý
+                                                    Sơn
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/hoa-binh-1604289204.html">
+                                                    Mai
+                                                    Châu
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/mui-ne.html">Mũi Né</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/ninh-thuan.html">
+                                                    Ninh
+                                                    Thuận
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/gia-lai.html">Pleiku</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/quang-ninh.html">
+                                                    Quảng
+                                                    Ninh
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/tuyen-quang.html">
+                                                    Tuyên
+                                                    Quang
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/ba-ria-vung-tau-1604289611.html">
+                                                    Vũng
+                                                    Tàu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/dac-lak.html">Đắc Lắc</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/dien-bien-1604289742.html">
+                                                    Điện
+                                                    Biên
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="mb30">
+                                    <div class="link-tour-footer">
+                                        <div class="link-title">QUỐC TẾ</div>
+                                        <ul>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/du-lich-chau-au.html">
+                                                    Châu
+                                                    Âu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/han-quoc.html">Hàn Quốc</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/my.html">Mỹ</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/du-lich-chau-uc.html">
+                                                    Châu
+                                                    Úc
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/singapore.html">Singapore</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/nam-phi.html">Nam Phi</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/nhat-ban.html">Nhật Bản</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/dai-loan.html">Đài Loan</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/ai-cap.html">Ai Cập</a></li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/an-do.html">Ấn Độ</a></li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/anh.html">Anh</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/argentina.html">Argentina</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/bhutan.html">Bhutan</a></li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/du-lich-bi.html">Bỉ</a></li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/Brazil.html">Brazil</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/campuchia.html">Campuchia</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/canada.html">Canada</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/colombia.html">Colombia</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/Cuba.html">Cuba</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/dubai.html">
+                                                    Dubai &amp;
+                                                    UAE
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/ha-lan.html">Hà Lan</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/hong-kong.html">Hồng Kông</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/hy-lap2.html">Hy Lạp</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/indonesia.html">Indonesia</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/lao.html">Lào</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/luxembourg.html">Luxembourg</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/malaysia.html">Malaysia</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/maldives.html">Maldives</a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/Mexico.html">Mexico</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/myanmar.html">Myanmar</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/new-zealand.html">
+                                                    New
+                                                    Zealand
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/nga.html">Nga</a></li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/du-lich-phap.html">Pháp</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/philippines.html">Philippines</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/trieu-tien.html">
+                                                    Triều
+                                                    Tiên
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/trung-quoc.html">
+                                                    Trung
+                                                    Quốc
+                                                </a>
+                                            </li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/du-lich-y.html">Ý</a></li>
+                                            <li><a href="https://dulichvietnam.com.vn/tour/duc.html">Đức</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="fhr">
+                    <div class="wrapper">
+                        <div class="row cel-p10">
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="mb30">
+                                    <div class="title-footer">Tổng đài toàn quốc</div>
+                                    <div class="content-footer">
+                                        <div class="mb5">
+                                            <p>
+                                                <strong>Khách hàng khởi hành từ:</strong><br>
+                                                <img alt="icon-dt-moi-nhe3" data-ck-zoom="yes"
+                                                     src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon-dt-moi-nhe3.png"
+                                                     style="width: 20px; height: 20px;">&nbsp;<strong>
+                                                    HN &amp; Miền
+                                                    Bắc:
+                                                </strong>&nbsp;<strong>
+                                                    <a href="tel:0936206998">
+                                                        <span style="color:#ff0000;">0936206998</span>
+                                                    </a>&nbsp;
+                                                </strong>(Nội
+                                                địa)<br>
+                                                <img alt="icon-dt-moi-nhe3" data-ck-zoom="yes"
+                                                     src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon-dt-moi-nhe3.png"
+                                                     style="width: 20px; height: 20px;">&nbsp;<strong>
+                                                    HCM &amp; Miền
+                                                    Nam:
+                                                </strong>&nbsp;<strong>
+                                                    <a href="tel:0898580008">
+                                                        <span style="color:#ff0000;">
+                                                            0934 466
+                                                            296&nbsp;
+                                                        </span>
+                                                    </a>
+                                                </strong>(Nội địa)<br>
+                                                <img alt="icon-dt-moi-nhe3" data-ck-zoom="yes"
+                                                     src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon-dt-moi-nhe3.png"
+                                                     style="width: 20px; height: 20px;">&nbsp;<strong>
+                                                    ĐN &amp; Miền
+                                                    Trung:
+                                                </strong>&nbsp;<strong>
+                                                    <a href="http://tel:0898077779/">
+                                                        <span style="color:#ff0000;">0898077779</span>
+                                                    </a>&nbsp;
+                                                </strong>(Nội
+                                                địa)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <div class="mb30">
+                                    <div class="title-footer">Thông Tin</div>
+                                    <div class="content-footer">
+                                        <div class="mb5">
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/tour/cach-dat-cho.html"
+                                                   target="_blank">Hướng dẫn đặt tour</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/tour/cach-thanh-toan.html"
+                                                   target="_blank">Hướng dẫn thanh toán</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/tour/dieu-khoan.html"
+                                                   target="_blank">Điều kiện &amp; điều khoản</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/tour/hoi-dap.html"
+                                                   target="_blank">Hỏi &amp; đáp (FAQs)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <div class="mb30">
+                                    <div class="title-footer">DỊCH VỤ</div>
+                                    <div class="content-footer">
+                                        <div class="mb5">
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/tour/"
+                                                   target="_blank">Tour trọn gói</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/hotel/"
+                                                   target="_blank">Hotel &amp; Combo</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/ve-may-bay/"
+                                                   target="_blank">Vé máy bay</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichvietnam.com.vn/visa-ho-chieu/"
+                                                   target="_blank">Visa, hộ chiếu</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://duthuyen.dulichvietnam.com.vn/"
+                                                   target="_blank">Tour du thuyền</a>
+                                            </div>
+                                            <div class="mb5">
+                                                <a href="https://dulichgolf.com.vn/" target="_blank">
+                                                    Du
+                                                    lịch Golf
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="mb30">
+                                    <div class="title-footer">Email &amp; Bản tin</div>
+                                    <div class="content-footer">
+                                        <div class="mb10">
+                                            Email:<strong>
+                                                <a href="https://dulichvietnam.com.vn/%22mailto:info@dulichvietnam.com.vn/%22">info@dulichvietnam.com.vn</a>
+                                            </strong><br>Đăng ký nhận bản tin khuyến mãi để lên kế hoạch cho kỳ nghỉ sắp
+                                            tới của bạn
+                                        </div>
+                                        <div>
+                                            <form id="formNewsletter" name="formNewsletter" method="post"
+                                                  action="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm"
+                                                  class="form-receive">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Nhập địa chỉ email" id="femail" name="femail">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn"
+                                                                onclick="vnTRUST.registerMaillist();">
+                                                            <span>
+                                                                <i class="fa fa-envelope"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="fhr">
+                        <div class="row cel-p10">
+                            <div class="col-md-3 col-sm-12 col-xs-12 pull-right">
+                                <div class="fr logo-social">
+                                    <div class="logo">
+                                        <a href="https://dulichvietnam.com.vn/tour/https://dulichvietnam.com.vn/tour/"
+                                           target="_blank" title="">
+                                            <img src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/logo-dlvn-tour-250x70.png"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="vnt-social">
+                                        <ul>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                                    <i class="fab fa-google-plus-g"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                                    <i class="fab fa-pinterest-p"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="mb10">
+                                    <div class="title-footer" style="text-align: justify;">
+                                        <strong>
+                                            VĂN PHÒNG TOÀN
+                                            QUỐC
+                                        </strong>
+                                    </div>
+
+                                    <div class="content-footer">
+                                        <div style="text-align: justify;">
+                                            <p>
+                                                <strong>Hà Nội:</strong>&nbsp;Số 48 Tố Hữu, Nam Từ Liêm - VP 2: Số 93
+                                                Hồng Hà, Ba Đình<br>
+                                                VP 3: Số 126 Trần Vỹ, Cầu Giấy<br>
+                                                <strong>HCM:&nbsp;</strong>Số 9 Phan Kế Bính, phường Đa Kao, Quận
+                                                1&nbsp;<br>
+                                                <strong>Đà Nẵng:&nbsp;</strong>Số&nbsp;76-78 Bạch Đằng, Hải Châu<br>
+                                                <strong>Hải Phòng: </strong>HD159 Hải Đăng, Vinhomes Marina, Võ Nguyên
+                                                Giáp, Lê Chân<br>
+                                                <a class="underline"
+                                                   href="https://dulichvietnam.com.vn/tour/lien-he.html"
+                                                   target="_blank">
+                                                    Xem tất cả các chi nhánh, VPĐD trong và ngoài
+                                                    nước
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="copyright">
+                                        <div>Copyright © 2018 - <strong>Bản quyền thuộc Du Lịch Việt Nam</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="mb10">
+
+
+                                    <div class="title-footer">Tải Ứng Dụng</div>
+                                    <div class="content-footer">
+                                        <div>
+                                            <a href="https://play.google.com/store/apps/details?id=com.app.dulichvietnam">
+                                                <img alt="google-play200" data-ck-zoom="yes"
+                                                     src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/google-play200.jpg"
+                                                     style="height: 39px; width: 130px;">
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <img alt="app-store200" data-ck-zoom="yes"
+                                                 src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/app-store200.png"
+                                                 style="color: rgb(102, 102, 102); font-size: 14px; font-style: italic; text-align: center; height: 38px; width: 130px;">
+                                        </div>
+                                        <a href="https://www.dmca.com/Protection/Status.aspx?ID=21581bba-d243-46d5-a7c7-451fd75c99c6"
+                                           title="DMCA.com Protection Status">
+                                            <img alt="DMCA.com Protection Status"
+                                                 src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/dmca_protected_sml_120aj.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--=== END: FOOTER ===-->
+
+        </div>
+
+        <!--=== BEGIN: MENU MOBILE ===-->
+        <div class="menu_mobile show_left menu_2">
+            <div class="divmm">
+                <div class="mmContent">
+                    <div class="mmMenu">
+                        <div class="close-mmenu">
+                            <div class="icon_menu">
+                                <span class="style_icon"></span>
+                            </div>
+                        </div>
+
+                        <ul class="mmMain">
+                            <li class="current">
+                                <a href="https://dulichvietnam.com.vn/tour/" target="_self">
+                                    Trang
+                                    chủ
+                                </a>
+                            </li>
+                            <li>
+                                <div class="m-sub" data-item="1">
+                                    <a href="javascript:void(0)" target="_blank">
+                                        Về chúng
+                                        tôi
+                                    </a>
+                                    <div class="button-submenu"></div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="https://chungtoi.dulichvietnam.com.vn/giay-phep-lhqt/trung-tam-lu-hanh/"
+                                           target="_self">Hoàng Việt Open</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/shd-travel-da-nang.html"
+                                           target="_self">SHD travel Đà Nẵng</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lu-hanh-viet-nam.html"
+                                           target="_self">Lữ Hành Việt Nam</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/tour/cach-dat-cho.html" target="_self">
+                                    Hướng dẫn
+                                    đặt tour
+                                </a>
+                            </li>
+                            <li class="current">
+                                <div class="m-sub" data-item="2">
+                                    <a href="javascript:void(0)" target="_self">
+                                        LỊCH KHỞI
+                                        HÀNH
+                                    </a>
+                                    <div class="button-submenu"></div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=1&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Hà Nội</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=2&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Tp HCM</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=3&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Đà Nẵng</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=39&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Hải Phòng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/tour/cach-thanh-toan.html" target="_self">
+                                    Hướng
+                                    dẫn thanh toán
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/tour/dieu-khoan.html" target="_self">
+                                    Điều kiện
+                                    &amp; điều khoản
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/tour/hoi-dap.html" target="_self">
+                                    Hỏi &amp;
+                                    đáp
+                                </a>
+                            </li>
+                            <li><a href="https://dulichvietnam.com.vn/tour/lien-he.html" target="_self">Liên hệ</a></li>
+                        </ul>
+
+                        <div class="gMenu">
+                            <div class="header-menu">
+                                <ul>
+                                    <li class="">
+                                        <a>
+                                            <img src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon_top1.png"
+                                                 alt="Tour du lịch"> Tour du lịch
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichgolf.com.vn/tour/"
+                                           target="_blank" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
+                                           _ Du Lịch Việt Nam_files /golf-icon16x16.png" alt="Tour Golf"> Tour Golf</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichduthuyen.com.vn/tour/"
+                                           target="_blank" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
+                                           _ Du Lịch Việt Nam_files /du-thuyen-icon16x16.png" alt="Du thuyền">
+                                            Du
+                                            thuyền
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://hotel.dulichvietnam.com.vn/"
+                                           target="_blank" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
+                                           _ Du Lịch Việt Nam_files /icon_khach-san.png" alt="Đặt khách sạn">
+                                            Đặt khách
+                                            sạn
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://visadulich.com.vn/" target="_blank" "=" "><img src="
+                                           . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt
+                                           Nam_files /icon_visa16.png" alt="Visa, hộ chiếu"> Visa, hộ chiếu</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichhangkhong.com.vn/"
+                                           target="_blank" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
+                                           _ Du Lịch Việt Nam_files /icon-ve-may-bay.png" alt="Vé máy bay">
+                                            Vé máy
+                                            bay
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichvietnam.com.vn/tour/#"
+                                           target="_blank" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
+                                           _ Du Lịch Việt Nam_files /ticket-icon16x16.png" alt="Vé, ăn &amp; chơi">
+                                            Vé,
+                                            ăn &amp; chơi
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://dulichvietnam.com.vn/tour/#"
+                                           target="_self" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
+                                           _ Du Lịch Việt Nam_files /bus-icon.png" alt="Xe, vận chuyển">
+                                            Xe, vận
+                                            chuyển
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gMenu">
+                            <div class="mobile-menu-footer">
+                                <ul>
+                                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                        <div class="mb30">
+                                            <div class="title-footer">Thông Tin</div>
+                                            <div class="content-footer">
+                                                <div class="mb5">
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/tour/cach-dat-cho.html"
+                                                           target="_blank">Hướng dẫn đặt tour</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/tour/cach-thanh-toan.html"
+                                                           target="_blank">Hướng dẫn thanh toán</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/tour/dieu-khoan.html"
+                                                           target="_blank">Điều kiện &amp; điều khoản</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/tour/hoi-dap.html"
+                                                           target="_blank">Hỏi &amp; đáp (FAQs)</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                        <div class="mb30">
+                                            <div class="title-footer">DỊCH VỤ</div>
+                                            <div class="content-footer">
+                                                <div class="mb5">
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/tour/"
+                                                           target="_blank">Tour trọn gói</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/hotel/"
+                                                           target="_blank">Hotel &amp; Combo</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/ve-may-bay/"
+                                                           target="_blank">Vé máy bay</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichvietnam.com.vn/visa-ho-chieu/"
+                                                           target="_blank">Visa, hộ chiếu</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://duthuyen.dulichvietnam.com.vn/"
+                                                           target="_blank">Tour du thuyền</a>
+                                                    </div>
+                                                    <div class="mb5">
+                                                        <a href="https://dulichgolf.com.vn/"
+                                                           target="_blank">Du lịch Golf</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mobile_social">
+                            <ul>
+                                <li>
+                                    <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dulichvietnam.com.vn/tour/?gidzl=UmtvDwxrV6rv6_WqgUnvRtaO-J2pkNvfRahzFxwvS34yJgG_xhztDZjCys3cwd8sEXtnE67amBLlhVnuRm#">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="mm_mmMenu">
+                            <div class="m-ab" data-item="1">
+                                <div class="m-ab-arrow"><a href="javascript:void(0);" title="">Trở về</a></div>
+                                <div class="m-ab-title">
+                                    <a href="https://chungtoi.dulichvietnam.com.vn/"
+                                       target="_blank">Về chúng tôi</a>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="https://chungtoi.dulichvietnam.com.vn/giay-phep-lhqt/trung-tam-lu-hanh/"
+                                           target="_self">Hoàng Việt Open</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/shd-travel-da-nang.html"
+                                           target="_self">SHD travel Đà Nẵng</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lu-hanh-viet-nam.html"
+                                           target="_self">Lữ Hành Việt Nam</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="m-ab" data-item="2">
+                                <div class="m-ab-arrow"><a href="javascript:void(0);" title="">Trở về</a></div>
+                                <div class="m-ab-title">
+                                    <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html"
+                                       target="_self">LỊCH KHỞI HÀNH</a>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=1&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Hà Nội</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=2&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Tp HCM</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=3&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Đà Nẵng</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=39&amp;destination=0&amp;cat_id=0"
+                                           target="_self">Lịch khởi hành từ Hải Phòng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divmmbg"></div>
+            </div>
+        </div>
+        <!--=== END: MENU MOBILE ===-->
+
+
+
+        <input type="hidden" name="vnt_csrf_token" id="vnt_csrf_token" value="ac433d874612cbfa6afe73dbbd5ef0e2">
+        <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/js/number/jquery.number.min.js"></script>
+        <script src="https://w.ladicdn.com/ladichat/sdk.js" id="61b9c76de50d0b001320d02c_61dd0dfc078b250012243e5e" async></script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/plugins/support_fixed/js/support_fixed.js?v=1.0"></script>
+     
+        <link href="https://dulichvietnam.com.vn/tour/plugins/support_fixed/css/support_fixed.css?v=1.0" rel="stylesheet" type="text/css" />
+            <div id="vnt-menu-fix">
+                <ul class="desktopFx">
+                    <li class="phoneFx">
+                        <a rel="nofollow" href="javascript:void(0);" class="s-popup vhtoa icon">
+                            <i class="vhrung fa fa-phone"></i>
+                        </a>
+                        <div id="vnt-popup-hotline" style="width:400px; max-width: 100%; display: none;">
+
+                            <div class="support-content">
+                                <div class="phoneTitle">Hotline</div>
+                                <div class="phoneInfo">
+                                    <ul class="list-call">
+                                        <li>
+                                            <div class="p-label">Khách hàng tại miền Bắc</div>
+                                            <div class="p-val">
+                                                <a href="tel:0936 206 998" rel="nofollow">0936 206 998</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-label">Khách hàng tại miền Nam</div>
+                                            <div class="p-val">
+                                                <a href="tel:0904 555 908" rel="nofollow">0904 555 908</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-label">Khách hàng tại miền Trung</div>
+                                            <div class="p-val">
+                                                <a href="tel:0906 298 055" rel="nofollow">0906 298 055</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="emailFx">
+                        <a href="javascript:void(0)" rel="nofollow" class="popupCRM">
+                            <span class="icon">
+                                <img src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon_email.svg"
+                                     width="40" alt="email">
+                            </span>
+                        </a>
+                        <div id="popupCRM" style="width:500px; max-width: 100%;  display: none;">
+                            <div id="getfly-optin-form-iframe-1646629350888">
+                                <iframe src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/saved_resource.html"
+                                        frameborder="0" marginheight="0" marginwidth="0"
+                                        style="width: 100%; height: 500px;"></iframe>
+                            </div>
+                            <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } if ((!url_string.has('utm_user') || url_string.get('utm_user') == '') && document.cookie.match(new RegExp('utm_user' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_user' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_user') != null ? "&utm_user=" + url_string.get('utm_user') : ""; } if ((!url_string.has('utm_account') || url_string.get('utm_account') == '') && document.cookie.match(new RegExp('utm_account' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_account' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_account') != null ? "&utm_account=" + url_string.get('utm_account') : ""; } r += "&full_url=" + encodeURIComponent(window.location.href); f.setAttribute("src", "https://dlvn.getflycrm.com/api/forms/viewform/?key=RGIz6VvXzoEXi5jJosCBUGpLIlLksFTBW74QFEqsLlkwE7EO8j&referrer=" + r); f.style.width = "100%"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1646629350888"); s.appendChild(f); })();</script>
+                        </div>
+                    </li>
+                    <li class="facebookFx">
+                        <a href="https://m.me/dulichvietnam.com.vn" rel="nofollow" target="_blank">
+                            <span class="icon ">
+                                <img src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon_messenger.svg"
+                                     width="40" alt="messenger">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="zaloFx">
+                        <a href="https://zalo.me/3778692002577823626" rel="nofollow" target="_blank">
+                            <span class="icon">
+                                <img src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/icon_zalo.svg"
+                                     width="40" alt="zalo">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="gotopFx">
+                        <a href="javascrip:void(0)" onclick="animate({scrollTop: 0},1000);" rel="nofollow">
+                            <i class="fas fa-arrow-up"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div><a href="javascript:void(0)" class="go_top" style="display:none"></a>
+        <script type="text/javascript" id="">
+            (function () {
+                var b = ["//static.amcdn.vn/core/analytics.js", "//static.amcdn.vn/cpa/amc-core.min.js"], c; for (c in b) { var a = document.createElement("script"); a.type = "text/javascript"; a.async = !0; a.src = b[c]; var d = document.getElementsByTagName("script")[0]; d.parentNode.insertBefore(a, d) } window.admicro_analytics_q = window.admicro_analytics_q || []; window.admicro_analytics_q.push({ event: "pageviews", domain: "luhanhviet.com.vn", id: 2311 }); window.admicro_cpa_q = window.admicro_cpa_q || []; window.admicro_cpa_q.push({
+                    event: "retargeting",
+                    id: 5664
+                })
+            })();</script>
+        <script type="text/javascript"
+                id="">var Tawk_API = window.Tawk_API || {}; window.dataLayer = window.dataLayer || []; Tawk_API.onChatStarted = function () { Tawk_API.isVisitorEngaged() && window.dataLayer.push({ event: "tawkSubmit" }) }; Tawk_API.onOfflineSubmit = function () { window.dataLayer.push({ event: "tawkSubmit" }) }; Tawk_API.onPrechatSubmit = function () { window.dataLayer.push({ event: "tawkSubmit" }) };</script>
+        <div id="ladichat">
+            <iframe id="ladichat-widget-frame"
+                    style="display: block; border: none; position: fixed; width: 64px; height: 64px; opacity: 1; background: none transparent; margin: 0px; transition: none 0s ease 0s; overflow: hidden; left: auto; right: 10px; bottom: 10px; z-index: 999999999 !important; visibility: visible;"
+                    src="./Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt Nam_files/saved_resource(1).html"></iframe>
+        </div>
+
+        <div>
+
+            
+
+        </div>
+
+</body>
+</html>
