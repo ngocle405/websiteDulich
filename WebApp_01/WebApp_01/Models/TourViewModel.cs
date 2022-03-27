@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 
 namespace WebApp_01.Models
 {
-    public class ProductViewModel
+    public class TourViewModel
     {
         public long Id { get; set; }
+        public string Code { get; set; }
         public string Name { get; set; }
         public long? CategoryId { get; set; }
-        public string CategotyName { get; set; }
+        public long? PlaceId { get; set; }
         public string Logo { get; set; }
         public string Description { get; set; }
-        public string Detail { get; set; }
         public decimal? Price { get; set; }
         public decimal? PriceDiscount { get; set; }
         public bool? IsNew { get; set; }
@@ -22,5 +22,12 @@ namespace WebApp_01.Models
         public string Url { get; set; }
         public int? DisplayOrder { get; set; }
         public int? Status { get; set; }
+        public string Destination { get; set; }
+        public string DeparturePoint { get; set; }
+        public DateTime Start { get; set; }
+        public string Vehicle { get; set; }
+        public string PlaceName { get; set; }
+        public string Time { get; set; }
+        public string CategoryName { get; set; }
     }
 }

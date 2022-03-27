@@ -28,6 +28,7 @@ namespace WebApp_01.Data
         public string Vehicle { get; set; }
         public string PlaceName { get; set; }
         public string Time { get; set; }
+        public string CategoryName { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Place Place { get; set; }

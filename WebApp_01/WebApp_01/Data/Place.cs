@@ -16,6 +16,7 @@ namespace WebApp_01.Data
         public string PlaceName { get; set; }
         public string Description { get; set; }
         public int? Status { get; set; }
+        public int? Area { get; set; }
         public bool? ShowHome { get; set; }
 
         public virtual ICollection<Tour> Tours { get; set; }

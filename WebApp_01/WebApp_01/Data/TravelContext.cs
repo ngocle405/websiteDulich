@@ -306,6 +306,7 @@ namespace WebApp_01.Data
                 entity.Property(e => e.CreateDate).HasColumnType("datetime");
 
                 entity.Property(e => e.DeparturePoint).HasMaxLength(50);
+                entity.Property(e => e.CategoryName).HasMaxLength(50);
 
                 entity.Property(e => e.Description).HasColumnType("text");
 

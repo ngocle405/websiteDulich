@@ -36,6 +36,7 @@ namespace WebApp_01
             services.AddTransient<ICategoryNewService, CategoryNewService>();
             services.AddTransient<INewsService, NewsService>();
             services.AddTransient<ISlideService, SlideService>();
+          
 
         }
 

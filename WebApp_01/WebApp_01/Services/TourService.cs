@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using WebApp_01.Areas.Admin.Models.Tour;
 using WebApp_01.Data;
+using WebApp_01.Models;
 
 namespace WebApp_01.Services
 {
@@ -16,7 +17,7 @@ namespace WebApp_01.Services
         //Task<List<ProductViewModel>> GetDiscountProduct();
         //  Task<PaginationViewModel> Pagination(Dictionary<string, object> data);
 
-        IEnumerable<Tour> GetAll();
+        IEnumerable<TourViewModel> GetAll();
 
         int Create(TourUpdateRequest request);
 
@@ -27,6 +28,7 @@ namespace WebApp_01.Services
         int Update(TourUpdateRequest request);
 
         int Delete(long id);
+        public IEnumerable<TourViewModel> ShowTours();
     }
     public class TourService : ITourService
     {
@@ -40,12 +42,58 @@ namespace WebApp_01.Services
             _storageService = storageService;
         }
 
-        public IEnumerable<Tour> GetAll()
+        public IEnumerable<TourViewModel> GetAll()
         {
-            var lst = _travelContext.Tours;
-            return lst;
+            return  _travelContext.Tours.Select(p => new TourViewModel()
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Logo = p.Logo,
+                CategoryName = p.Category.Name,
+                Description = p.Description,
+                Price = p.Price,
+              
+                PriceDiscount = p.PriceDiscount,
+                IsNew = p.IsNew,
+                Url = p.Url,
+                DisplayOrder = p.DisplayOrder,
+                Status = p.Status,
+                CreateDate = p.CreateDate,
+                Code=p.Code,
+                PlaceName=p.Place.PlaceName,
+                Destination=p.Destination,
+                DeparturePoint=p.DeparturePoint,
+                Start=p.Start,
+                Vehicle=p.Vehicle,
+                Time=p.Time
+            });
         }
+        public IEnumerable<TourViewModel> ShowTours()
+        {
+            return _travelContext.Tours.Select(p => new TourViewModel()
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Logo = p.Logo,
+                CategoryName = p.Category.Name,
+                Description = p.Description,
+                Price = p.Price,
 
+                PriceDiscount = p.PriceDiscount,
+                IsNew = p.IsNew,
+                Url = p.Url,
+                DisplayOrder = p.DisplayOrder,
+                Status = p.Status,
+                CreateDate = p.CreateDate,
+                Code = p.Code,
+                PlaceName = p.Place.PlaceName,
+                Destination = p.Destination,
+                DeparturePoint = p.DeparturePoint,
+                Start = p.Start,
+                Vehicle = p.Vehicle,
+                Time = p.Time
+            }).Take(12);
+        }
         //public async Task<List<ProductViewModel>> GetDiscountProduct()
         //{
 
