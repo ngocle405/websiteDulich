@@ -10145,11 +10145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebApp_01\\WebApp_01\\WebApp_01.csproj",
+      "projectUniqueName": "G:\\websiteDulich\\WebApp_01\\WebApp_01\\WebApp_01.csproj",
       "projectName": "WebApp_01",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebApp_01\\WebApp_01\\WebApp_01.csproj",
+      "projectPath": "G:\\websiteDulich\\WebApp_01\\WebApp_01\\WebApp_01.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebApp_01\\WebApp_01\\obj\\",
+      "outputPath": "G:\\websiteDulich\\WebApp_01\\WebApp_01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
