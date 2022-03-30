@@ -15,7 +15,7 @@ namespace WebApp_01.Areas.Admin.Models
         [Required(ErrorMessage = "Bạn phải chọn trạng thái")]
         public int Status { get; set; }
         [Required(ErrorMessage = "Bạn phải chọn miền")]
-        public int? Area { get; set; }
+        public int Area { get; set; }
         public bool ShowHomeInput
         {
             get => this.ShowHome.GetValueOrDefault();

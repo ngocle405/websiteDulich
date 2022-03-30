@@ -40,6 +40,7 @@ namespace WebApp_01.Services
                     Description = request.Description,
                     ShowHome=request.ShowHome,
                     Status = 1,
+                    Area=1
                 };
                 _travelContext.Places.Add(Place);
                 int res = _travelContext.SaveChanges();

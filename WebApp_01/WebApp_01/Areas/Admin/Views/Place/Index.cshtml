@@ -5,7 +5,9 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/_LayoutAdmin.cshtml";
 }
-
+<input type="hidden" id="success" value="@TempData["success"]" />
+<input type="hidden" id="warning" value="@TempData["warning"]" />
+<input type="hidden" id="error" value="@TempData["error"]" />
 <div class="container-fluid">
     <h1 class="mt-4">Danh sách loại tour</h1>
     <ol class="breadcrumb mb-4">
@@ -33,6 +35,7 @@
                                 <th>Mô tả</th>
                                 <th>Hiển thị</th>
                                 <th>Trạng thái</th>
+                                <th>Miền</th>
                                 <th>#</th>
                             </tr>
                         </thead>
@@ -61,6 +64,24 @@
                                         {
                                             <td><span class="btn-danger">Khóa</span></td>
                                         }
+                                        @if (item.Area == 1)
+                                        {
+                                            <td>Miền bắc</td>
+                                        }
+                                        @if (item.Area == 2)
+                                        {
+                                            <td>Miền trung</td>
+                                        }
+                                        @if (item.Area == 3)
+                                        {
+                                            <td>Miền Nam</td>
+                                        }
+                                        @if (item.Area == null)
+                                        {
+                                            <td>Chưa xác định</td>
+                                        }
+
+
                                         <td>
                                             <a href="/Admin/Place/Edit/@item.Id" class="btn btn-primary glyphicon glyphicon-pencilt">Sửa</a>
                                             <a class="btn btn-danger glyphicon glyphicon-trash" onclick="return confirm('Bạn có muốn xóa không?');" href="@Url.Action("Delete","Place")/@item.Id">Xóa</a>

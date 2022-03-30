@@ -49,7 +49,6 @@ namespace WebApp_01.Areas.Admin.Controllers
             }
 
             var result =  _placeService.Create(request);
-
             if (result != -1)
             {
                 TempData["success"] = "Thêm mới địa điểm thành công";
