@@ -1,0 +1,756 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var listProduct = (IEnumerable<WebAppDulich.Models.TourViewModel>)ViewBag.ListProduct;
+    var listPlace = (IEnumerable<WebAppDulich.Data.Place>)ViewBag.ListPlace;
+}
+
+<div id="vnt-content">
+    <div class="block-banner-search">
+        <div class="vnt-banner">
+            <div id="banner_main" class="slick-initialized slick-slider active">
+
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track" style="opacity: 1; width: 4428px;" role="listbox">
+                        <div class="item slick-slide slick-current slick-active" data-slick-index="0"
+                             aria-hidden="false"
+                             style="width: 1476px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+                             tabindex="-1" role="option" aria-describedby="slick-slide00">
+                            <a target="_blank" href="http://dulichvietnam.com.vn/tour/lich-khoi-hanh.html"
+                               tabindex="0">
+                                <div class="i-img"
+                                     style="background-image: url(https://dulichvietnam.com.vn/tour/vnt_upload/weblink/1280x462.png);">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item slick-slide" data-slick-index="1" aria-hidden="true"
+                             style="width: 1476px; position: relative; left: -1476px; top: 0px; z-index: 998; opacity: 0;"
+                             tabindex="-1" role="option" aria-describedby="slick-slide01">
+                            <a target="_blank" href="http://dulichvietnam.com.vn/tour/lich-khoi-hanh.html"
+                               tabindex="-1">
+                                <div class="i-img"
+                                     style="background-image: url(https://dulichvietnam.com.vn/tour/vnt_upload/weblink/1280x462-2.png);">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item slick-slide" data-slick-index="2" aria-hidden="true"
+                             style="width: 1476px; position: relative; left: -2952px; top: 0px; z-index: 998; opacity: 0;"
+                             tabindex="-1" role="option" aria-describedby="slick-slide02">
+                            <a target="_blank" href="https://dulichvietnam.com.vn/tour/" tabindex="-1">
+                                <div class="i-img"
+                                     style="background-image: url(https://dulichvietnam.com.vn/tour/vnt_upload/weblink/banner-dlvn-tour_1.jpg);">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="style-search">
+                <div class="wrapper">
+                    <div class="list-search">
+                        <ul>
+
+                            <li>
+                                <a class="active" href="https://dulichvietnam.com.vn/tour/" target="_self">
+                                    <span><i class="icon fa fa-clipboard-check"></i></span>
+                                    <span class="text">TOUR TRỌN GÓI</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/hotel/" target="_blank">
+                                    <span><i class="icon far fa-building"></i></span>
+                                    <span class="text">Hotel &amp; Combo</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/ve-may-bay/" target="_blank">
+                                    <span><i class="icon fa fa-plane"></i></span>
+                                    <span class="text">Vé máy bay</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/visa-ho-chieu/" target="_blank">
+                                    <span><i class="icon fab fa-cc-visa"></i></span>
+                                    <span class="text">Visa, hộ chiếu</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://duthuyen.dulichvietnam.com.vn/" target="_blank">
+                                    <span><i class="icon fa fa-ship"></i></span>
+                                    <span class="text">Tour du thuyền</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://dulichgolf.com.vn/" target="_blank">
+                                    <span><i class="icon fas fa-golf-ball"></i></span>
+                                    <span class="text">Du lịch Golf</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://dulichvietnam.com.vn/" target="_blank">
+                                    <span><i class="icon fas fa-book"></i></span>
+                                    <span class="text">Blog, tin tức</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="form-search">
+                        <div class="fs-row">
+                            <div class="fs-cel fs-search">
+                                <div class="sp20 bre">
+                                    <div class="title-search">TÌM TOUR THEO ĐIỂM ĐẾN</div>
+                                    <form id="formSearch" name="formSearch" method="post"
+                                          action="https://dulichvietnam.com.vn/tour/tour.html">
+                                        <div class="typeAHeadDiv" id="typeAHeadDiv">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="twitter-typeahead"
+                                                          style="position: relative; display: inline-block;">
+                                                        <input type="text"
+                                                               class="form-control typeahead tt-hint"
+                                                               readonly="" autocomplete="off"
+                                                               spellcheck="false" tabindex="-1" dir="ltr"
+                                                               style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(238, 238, 238);"><input type="text"
+                                                        <pre aria-hidden="true"
+                                                             style="position: absolute; visibility: hidden; white-space: pre; font-family: Muli, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                                                        <div class="tt-menu"
+                                                             style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                                                            <div class="tt-dataset tt-dataset-locations">
+                                                            </div>
+                                                            <div class="tt-dataset tt-dataset-pointofinterests">
+                                                            </div>
+                                                            <div class="tt-dataset tt-dataset-tours"></div>
+                                                            <div class="tt-dataset tt-dataset-popularLocation">
+                                                            </div>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-btn">
+                                                        <button class="btn searchButton"
+                                                                id="searchButton">
+                                                            <span>
+                                                                <i class="fab fa-sistrix"></i>
+                                                            </span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="fs-cel fs-tour">
+                                <div class="sp20">
+                                    <div class="title-search">TÌM THEO LOẠI HÌNH TOUR</div>
+                                    <form id="formSearch" name="formSearch" method="post"
+                                          action="https://dulichvietnam.com.vn/tour/tour.html">
+                                        <div class="row cel-p5">
+
+                                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                                <div class="script-select">
+                                                    <select class="form-control chosen-select"
+                                                            id="destination" name="destination"
+                                                            style="display: none;">
+                                                        <option value="0">Điểm đến ---</option>
+                                                        <optgroup label="NỘI ĐỊA">
+                                                            <option value="56">Miền Bắc</option>
+                                                            <option value="1">Hà Nội</option>
+                                                            <option value="30">Sapa</option>
+                                                            <option value="40">Cần Thơ</option>
+                                                            <option value="31">Hà Giang</option>
+                                                            <option value="71">Vĩnh Phúc</option>
+                                                            <option value="39">Hải Phòng</option>
+                                                            <option value="91">Vinh</option>
+                                                            <option value="81">Yên Bái</option>
+                                                            <option value="29">Mộc Châu</option>
+                                                            <option value="51">Cao Bằng</option>
+                                                            <option value="80">Sơn La</option>
+                                                            <option value="21">Hạ Long</option>
+                                                            <option value="96">Hà Nam</option>
+                                                            <option value="95">Ninh Bình</option>
+                                                            <option value="67">Thanh Hóa</option>
+                                                            <option value="63">Quảng Bình</option>
+                                                            <option value="5">Huế</option>
+                                                            <option value="58">Khánh Hòa</option>
+                                                            <option value="3">Đà Nẵng</option>
+                                                            <option value="47">Quy Nhơn</option>
+                                                            <option value="60">Phú Yên</option>
+                                                            <option value="4">Nha Trang</option>
+                                                            <option value="20">Phan Thiết</option>
+                                                            <option value="18">Đà Lạt</option>
+                                                            <option value="69">Buôn Mê Thuột</option>
+                                                            <option value="2">Hồ Chí Minh</option>
+                                                            <option value="23">Phú Quốc</option>
+                                                            <option value="33">Côn Đảo</option>
+                                                            <option value="66">Miền Tây</option>
+                                                            <option value="52">Bắc Kạn</option>
+                                                            <option value="79">Hòa Bình</option>
+                                                            <option value="62">Hội An</option>
+                                                            <option value="83">Kiên Giang</option>
+                                                            <option value="99">Lạng Sơn</option>
+                                                            <option value="98">Lào Cai</option>
+                                                            <option value="104">Long An</option>
+                                                            <option value="97">Lý Sơn</option>
+                                                            <option value="77">Mai Châu</option>
+                                                            <option value="100">Mũi Né</option>
+                                                            <option value="59">Ninh Thuận</option>
+                                                            <option value="70">Pleiku</option>
+                                                            <option value="53">Quảng Ninh</option>
+                                                            <option value="74">Tuyên Quang</option>
+                                                            <option value="19">Vũng Tàu</option>
+                                                            <option value="105">Đắc Lắc</option>
+                                                            <option value="76">Điện Biên</option>
+                                                        </optgroup>
+                                                        <optgroup label="QUỐC TẾ">
+                                                            <option value="48">Châu Âu</option>
+                                                            <option value="15">Hàn Quốc</option>
+                                                            <option value="32">Mỹ</option>
+                                                            <option value="54">Châu Úc</option>
+                                                            <option value="14">Singapore</option>
+                                                            <option value="84">Nam Phi</option>
+                                                            <option value="12">Nhật Bản</option>
+                                                            <option value="36">Đài Loan</option>
+                                                            <option value="86">Ai Cập</option>
+                                                            <option value="85">Ấn Độ</option>
+                                                            <option value="6">Anh</option>
+                                                            <option value="41">Argentina</option>
+                                                            <option value="89">Bhutan</option>
+                                                            <option value="26">Bỉ</option>
+                                                            <option value="46">Brazil</option>
+                                                            <option value="24">Campuchia</option>
+                                                            <option value="34">Canada</option>
+                                                            <option value="42">Colombia</option>
+                                                            <option value="45">Cuba</option>
+                                                            <option value="50">Dubai &amp; UAE</option>
+                                                            <option value="28">Hà Lan</option>
+                                                            <option value="17">Hồng Kông</option>
+                                                            <option value="92">Hy Lạp</option>
+                                                            <option value="10">Indonesia</option>
+                                                            <option value="11">Lào</option>
+                                                            <option value="27">Luxembourg</option>
+                                                            <option value="16">Malaysia</option>
+                                                            <option value="55">Maldives</option>
+                                                            <option value="44">Mexico</option>
+                                                            <option value="25">Myanmar</option>
+                                                            <option value="72">New Zealand</option>
+                                                            <option value="49">Nga</option>
+                                                            <option value="7">Pháp</option>
+                                                            <option value="88">Philippines</option>
+                                                            <option value="87">Triều Tiên</option>
+                                                            <option value="9">Trung Quốc</option>
+                                                            <option value="37">Ý</option>
+                                                            <option value="8">Đức</option>
+                                                        </optgroup>
+                                                    </select>
+                                                    <div class="chosen-container chosen-container-single"
+                                                         title="" id="destination_chosen"
+                                                         style="width: 243px;">
+                                                        <a class="chosen-single">
+                                                            <span>Điểm đến ---</span>
+                                                            <div><b></b></div>
+                                                        </a>
+                                                        <div class="chosen-drop">
+                                                            <div class="chosen-search">
+                                                                <input class="chosen-search-input"
+                                                                       type="text" autocomplete="off">
+                                                            </div>
+                                                            <ul class="chosen-results"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                                <div class="script-select">
+                                                    <select class="form-control chosen-select" id="cat_id"
+                                                            name="cat_id" style="display: none;">
+                                                        <option value="0">Loại tour ---</option>
+                                                        <option value="31">Tour Lễ - Tết</option>
+                                                        <option value="22">Tour HOT</option>
+                                                        <option value="35">
+                                                            Tour lẻ ghép đường bộ
+                                                        </option>
+                                                        <option value="12">
+                                                            Tour lẻ ghép đường bay
+                                                        </option>
+                                                        <option value="30">Tour khách đoàn, MICE</option>
+                                                        <option value="13">
+                                                            Tour ngắn tại điểm, City
+                                                            tour
+                                                        </option>
+                                                    </select>
+                                                    <div class="chosen-container chosen-container-single"
+                                                         title="" id="cat_id_chosen" style="width: 243px;">
+                                                        <a class="chosen-single">
+                                                            <span>Loại tour ---</span>
+                                                            <div><b></b></div>
+                                                        </a>
+                                                        <div class="chosen-drop">
+                                                            <div class="chosen-search">
+                                                                <input class="chosen-search-input"
+                                                                       type="text" autocomplete="off">
+                                                            </div>
+                                                            <ul class="chosen-results"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                                <button type="submit" class="btn">
+                                                    <span>
+                                                        <i class="fab fa-sistrix"></i>Tìm
+                                                        tour
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <link href="https://dulichvietnam.com.vn/tour/js/search/search.css" rel="stylesheet" type="text/css" />
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vnt-tinhnang">
+        <div class="wrapper">
+            <div class="row w_effect_up show">
+                <div class="col-md-4 col-sm-12 col-xs-12 effect_up" style="animation-duration: 0.9s;">
+                    <div class="item-tn">
+                        <div class="i-img">
+                            <img alt="icon1" data-ck-zoom="yes"
+                                 src="https://luhanhvietnam.com.vn/vnt_upload/File/Image/icon2.png">
+                        </div>
+
+                        <div class="i-title">Thương hiệu uy tín - tin cậy</div>
+
+                        <div class="i-content">
+                            Hơn 20 năm kinh nghiệm, giải thưởng uy tín, kết nối nhiều
+                            công nghệ du lịch mới.. sẽ làm hài lòng du khách
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12 effect_up" style="animation-duration: 1.2s;">
+                    <div class="item-tn">
+                        <div class="i-img">
+                            <img alt="icon2" data-ck-zoom="yes"
+                                 src="https://luhanhvietnam.com.vn/vnt_upload/File/Image/icon1.png">
+                        </div>
+
+                        <div class="i-title">Hỗ trợ - tư vấn toàn quốc</div>
+
+                        <div class="i-content">
+                            Trụ sở chính tại Hà Nội và Tp Hồ Chí Mình cùng 20 chi nhánh,
+                            VPDD tại các thành phố lớn trên cả nước...
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12 effect_up" style="animation-duration: 1.5s;">
+                    <div class="item-tn">
+                        <div class="i-img">
+                            <img alt="icon3" data-ck-zoom="yes"
+                                 src="https://luhanhvietnam.com.vn/vnt_upload/File/Image/icon3.png">
+                        </div>
+
+                        <div class="i-title">Dịch vụ đa dạng - đầy đủ</div>
+
+                        <div class="i-content">
+                            Thông tin khuyến mãi về tour, vé thăm quan, dịch vụ Visa,
+                            voucher khách sạn, thuê xe, vé máy bay...&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vnt-tintuc">
+        <div class="wrapper">
+            <div class="style-title-1 lazyloading">
+                <div class="fl">
+                    <h2 class="stTitle">Tour, dịch vụ du lịch HOT</h2>
+                </div>
+                <div class="fr">
+                    <div class="link-more-2">
+                        <a href="https://dulichvietnam.com.vn/tour/tour-dich-vu-du-lich-hot.html">
+                            Xem
+                            thêm
+                        </a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="slider-tour loadBottom slick-initialized slick-slider">
+
+
+
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track"
+                         style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
+                         role="listbox">
+                        <div style="width: 1200px;" class="wrap-item slick-slide slick-current slick-active">
+
+
+                            @if (listProduct.Count() > 0)
+                            {
+
+                                @foreach (var item in listProduct)
+                                {
+
+                                    <div class="item col-md-3">
+                                        <div class="item-tour tour-km">
+                                            <div class="i-img">
+                                                <a href="#"
+                                                   title="@item.Name"
+                                                   tabindex="0">
+                                                    <img src="@item.Logo"
+                                                         alt="">
+                                                    <span class="i-address">@item.PlaceName</span>
+                                                </a>
+                                                <div class="ribbon">
+                                                    <div class="rib"
+                                                         style="background-color: #d82727;  border-color: #d82727">
+                                                        TOUR BÁN CHẠY
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="i-desc">
+                                                <div class="i-title">
+                                                    <a href="#"
+                                                       tabindex="0">
+                                                        @item.Name
+                                                    </a>
+                                                </div>
+                                                <div class="div-price">
+                                                    Giá từ : <span class="price text-danger">@Convert.ToDecimal(item.Price).ToString("N0")</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+
+
+                                }
+                            }
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="vnt-tintuc">
+        <div class="wrapper">
+            <div class="style-title-1 lazyloading">
+                <div class="fl">
+                    <h2 class="stTitle2">Miền Bắc</h2>
+                    <ul class="ul-title">
+                        @foreach (var item in listPlace.Where(x => x.Area == 1))
+                        {
+                            <li>
+                                <a href="#">
+                                    <h3>@item.PlaceName</h3>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="fr">
+                    <div class="div-sub">
+                        <div class="link-more-3 dropdown-toggle" data-toggle="dropdown" role="button"
+                             aria-haspopup="true" aria-expanded="false">
+                            <a href="javascript:void(0)">Tất cả</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="slider-tour loadBottom slick-initialized slick-slider">
+
+
+
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track"
+                         style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
+                         role="listbox">
+                        <div style="width: 1200px;" class="wrap-item slick-slide slick-current slick-active">
+
+
+                            @if (listProduct.Count() > 0)
+                            {
+
+                                @foreach (var item in listProduct)
+                                {
+
+                                    <div class="item col-md-3">
+                                        <div class="item-tour tour-km">
+                                            <div class="i-img">
+                                                <a href="#"
+                                                   title="@item.Name"
+                                                   tabindex="0">
+                                                    <img src="@item.Logo"
+                                                         alt="">
+                                                    <span class="i-address">@item.PlaceName</span>
+                                                </a>
+                                                <div class="ribbon">
+                                                    <div class="rib"
+                                                         style="background-color: #d82727;  border-color: #d82727">
+                                                        TOUR BÁN CHẠY
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="i-desc">
+                                                <div class="i-title">
+                                                    <a href="#"
+                                                       tabindex="0">
+                                                        @item.Name
+                                                    </a>
+                                                </div>
+                                                <div class="div-price">
+                                                    Giá từ : <span class="price text-danger">@Convert.ToDecimal(item.Price).ToString("N0")</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+
+
+                                }
+                            }
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="vnt-tintuc">
+        <div class="wrapper">
+            <div class="style-title-1 lazyloading">
+                <div class="fl">
+                    <h2 class="stTitle2">Miền Trung</h2>
+                    <ul class="ul-title">
+                        @foreach (var item in listPlace.Where(x => x.Area == 2))
+                        {
+                            <li>
+                                <a href="#">
+                                    <h3>@item.PlaceName</h3>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="fr">
+                    <div class="div-sub">
+                        <div class="link-more-3 dropdown-toggle" data-toggle="dropdown" role="button"
+                             aria-haspopup="true" aria-expanded="false">
+                            <a href="javascript:void(0)">Tất cả</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="slider-tour loadBottom slick-initialized slick-slider">
+
+
+
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track"
+                         style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
+                         role="listbox">
+                        <div style="width: 1200px;" class="wrap-item slick-slide slick-current slick-active">
+
+
+                            @if (listProduct.Count() > 0)
+                            {
+
+                                @foreach (var item in listProduct)
+                                {
+
+                                    <div class="item col-md-3">
+                                        <div class="item-tour tour-km">
+                                            <div class="i-img">
+                                                <a href="#"
+                                                   title="@item.Name"
+                                                   tabindex="0">
+                                                    <img src="@item.Logo"
+                                                         alt="">
+                                                    <span class="i-address">@item.PlaceName</span>
+                                                </a>
+                                                <div class="ribbon">
+                                                    <div class="rib"
+                                                         style="background-color: #d82727;  border-color: #d82727">
+                                                        TOUR BÁN CHẠY
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="i-desc">
+                                                <div class="i-title">
+                                                    <a href="#"
+                                                       tabindex="0">
+                                                        @item.Name
+                                                    </a>
+                                                </div>
+                                                <div class="div-price">
+                                                    Giá từ : <span class="price text-danger">@Convert.ToDecimal(item.Price).ToString("N0")</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+
+
+                                }
+                            }
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="vnt-tintuc">
+        <div class="wrapper">
+            <div class="style-title-1 lazyloading">
+                <div class="fl">
+                    <h2 class="stTitle2">Miền Nam</h2>
+                    <ul class="ul-title">
+                        @foreach (var item in listPlace.Where(x => x.Area == 3))
+                        {
+                            <li>
+                                <a href="#">
+                                    <h3>@item.PlaceName</h3>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="fr">
+                    <div class="div-sub">
+                        <div class="link-more-3 dropdown-toggle" data-toggle="dropdown" role="button"
+                             aria-haspopup="true" aria-expanded="false">
+                            <a href="javascript:void(0)">Tất cả</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="slider-tour loadBottom slick-initialized slick-slider">
+
+
+
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track"
+                         style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
+                         role="listbox">
+                        <div style="width: 1200px;" class="wrap-item slick-slide slick-current slick-active">
+
+                            @if (listProduct.Count() > 0)
+                            {
+
+                                @foreach (var item in listProduct)
+                                {
+
+                                    <div class="item col-md-3">
+                                        <div class="item-tour tour-km">
+                                            <div class="i-img">
+                                                <a href="#"
+                                                   title="@item.Name"
+                                                   tabindex="0">
+                                                    <img src="@item.Logo"
+                                                         alt="">
+                                                    <span class="i-address">@item.PlaceName</span>
+                                                </a>
+                                                <div class="ribbon">
+                                                    <div class="rib"
+                                                         style="background-color: #d82727;  border-color: #d82727">
+                                                        TOUR BÁN CHẠY
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="i-desc">
+                                                <div class="i-title">
+                                                    <a href="#"
+                                                       tabindex="0">
+                                                        @item.Name
+                                                    </a>
+                                                </div>
+                                                <div class="div-price">
+                                                    Giá từ : <span class="price text-danger">@Convert.ToDecimal(item.Price).ToString("N0")</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+
+
+                                }
+                            }
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
