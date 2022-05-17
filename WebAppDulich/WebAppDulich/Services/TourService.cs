@@ -92,6 +92,8 @@ namespace WebAppDulich.Services
                 Start = p.Start,
                 Vehicle = p.Vehicle,
                 Time = p.Time
+                ,
+                AreaName=p.AreaName
             }).Take(12);
         }
         //public async Task<List<ProductViewModel>> GetDiscountProduct()
@@ -217,7 +219,9 @@ namespace WebAppDulich.Services
                     Start = request.Start,
                     Time = request.Time,
                     Vehicle = request.Vehicle,
-                    PlaceName = request.PlaceName
+                    PlaceName = request.PlaceName,
+                    AreaName=request.AreaName
+                    
                 };
                 if (request.FileUpload != null)
                 {
@@ -303,7 +307,8 @@ namespace WebAppDulich.Services
                     Start = product.Start,
                     Vehicle = product.Vehicle,
                     PlaceName = product.PlaceName,
-                    Time = product.Time
+                    Time = product.Time,
+                    AreaName = product.AreaName
                 };
 
                 return updateProductsViewModel;
@@ -341,6 +346,7 @@ namespace WebAppDulich.Services
                 product.Vehicle = request.Vehicle;
                 product.PlaceName = request.PlaceName;
                 product.EditDate = DateTime.Now;
+                product.AreaName = request.AreaName;
                 if (request.FileUpload != null)
                 {
                     _storageService.DeleteFileAsync(product.Logo);

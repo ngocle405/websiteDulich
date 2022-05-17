@@ -9,7 +9,7 @@
 }
 @section js{
     <script src="~/admin/js/summernote/summernote-bs4.js"></script>
-  
+    <script src="~/admin/js/custemUrl.js"></script>
     <script>
         $(document).ready(function () {
             $('#Description').summernote({
@@ -101,6 +101,14 @@
                             <span asp-validation-for="Start" class="text-danger"></span>
                         </div>
                         <div class="form-group">
+                            <select class="form-control" asp-for="AreaName" >
+                                <option selected>Chọn miền</option>
+                                <option value="MIEN_BAC">Miền bắc</option>
+                                <option value="MIEN_TRUNG">Miền trung</option>
+                                <option value="MIEN_NAM">Miền nam</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label class="control-label">Phương tiện</label>
                             <input asp-for="Vehicle" type="text" class="form-control" />
                             <span asp-validation-for="Vehicle" class="text-danger"></span>
@@ -126,12 +134,12 @@
                             <span asp-validation-for="DisplayOrder" class="text-danger"></span>
                         </div>
                         @*<div class="form-group">
-                                <label for="exampleInputEmail1">Trạng thái</label>
-                                <select class="form-control" id="Status" asp-for="Status">
-                                    <option value="1" selected>Còn hàng</option>
-                                    <option value="0">Hết hàng</option>
-                                </select>
-                            </div>*@
+            <label for="exampleInputEmail1">Trạng thái</label>
+            <select class="form-control" id="Status" asp-for="Status">
+                <option value="1" selected>Còn hàng</option>
+                <option value="0">Hết hàng</option>
+            </select>
+        </div>*@
                         <div class="form-group">
                             <label class="control-label">Hình ảnh</label>
                             <input asp-for="FileUpload" type="file" class="form-control" />

@@ -29,7 +29,7 @@ namespace WebAppDulich.Data
         public string PlaceName { get; set; }
         public string Time { get; set; }
         public string CategoryName { get; set; }
-
+        public string AreaName { get; set; }
         public virtual Category Category { get; set; }
         public virtual Place Place { get; set; }
     }

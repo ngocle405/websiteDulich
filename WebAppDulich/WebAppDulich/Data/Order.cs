@@ -15,6 +15,7 @@ namespace WebAppDulich.Data
         public string OrderNote { get; set; }
         public decimal? TotalMoney { get; set; }
         public int? PaymentStatus { get; set; }
+        public long TourId { get; set; }
         public DateTime? CreatedDate { get; set; }
     }
 }

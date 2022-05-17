@@ -43,11 +43,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
 
             <div class="style-search">
@@ -61,7 +56,6 @@
                                     <span class="text">TOUR TRỌN GÓI</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://dulichvietnam.com.vn/hotel/" target="_blank">
                                     <span><i class="icon far fa-building"></i></span>
@@ -75,7 +69,6 @@
                                     <span class="text">Vé máy bay</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://dulichvietnam.com.vn/visa-ho-chieu/" target="_blank">
                                     <span><i class="icon fab fa-cc-visa"></i></span>
@@ -89,22 +82,18 @@
                                     <span class="text">Tour du thuyền</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://dulichgolf.com.vn/" target="_blank">
                                     <span><i class="icon fas fa-golf-ball"></i></span>
                                     <span class="text">Du lịch Golf</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://dulichvietnam.com.vn/" target="_blank">
                                     <span><i class="icon fas fa-book"></i></span>
                                     <span class="text">Blog, tin tức</span>
                                 </a>
                             </li>
-
-
                         </ul>
                     </div>
                     <div class="form-search">
@@ -321,10 +310,6 @@
                         </div>
                     </div>
                     <link href="https://dulichvietnam.com.vn/tour/js/search/search.css" rel="stylesheet" type="text/css" />
-
-
-
-                    
                 </div>
             </div>
         </div>
@@ -401,9 +386,6 @@
                 <div class="clear"></div>
             </div>
             <div class="slider-tour loadBottom slick-initialized slick-slider">
-
-
-
                 <div aria-live="polite" class="slick-list draggable">
                     <div class="slick-track"
                          style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
@@ -449,21 +431,11 @@
                                         </div>
                                         <br />
                                     </div>
-
-
                                 }
                             }
-
-
-
-
                         </div>
-
-
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -473,16 +445,6 @@
             <div class="style-title-1 lazyloading">
                 <div class="fl">
                     <h2 class="stTitle2">Miền Bắc</h2>
-                    <ul class="ul-title">
-                        @foreach (var item in listPlace.Where(x => x.Area == 1))
-                        {
-                            <li>
-                                <a href="#">
-                                    <h3>@item.PlaceName</h3>
-                                </a>
-                            </li>
-                        }
-                    </ul>
                 </div>
                 <div class="fr">
                     <div class="div-sub">
@@ -490,15 +452,11 @@
                              aria-haspopup="true" aria-expanded="false">
                             <a href="javascript:void(0)">Tất cả</a>
                         </div>
-
                     </div>
                 </div>
                 <div class="clear"></div>
             </div>
             <div class="slider-tour loadBottom slick-initialized slick-slider">
-
-
-
                 <div aria-live="polite" class="slick-list draggable">
                     <div class="slick-track"
                          style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
@@ -509,13 +467,13 @@
                             @if (listProduct.Count() > 0)
                             {
 
-                                @foreach (var item in listProduct)
+                                @foreach (var item in listProduct.Where(x => x.AreaName == "MIEN_BAC"))
                                 {
 
                                     <div class="item col-md-3">
                                         <div class="item-tour tour-km">
                                             <div class="i-img">
-                                                <a href="#"
+                                                <a href="/home/tourDescription/@item.Id"
                                                    title="@item.Name"
                                                    tabindex="0">
                                                     <img src="@item.Logo"
@@ -544,18 +502,9 @@
                                         </div>
                                         <br />
                                     </div>
-
-
                                 }
                             }
-
-
-
-
                         </div>
-
-
-
                     </div>
                 </div>
 
@@ -569,14 +518,7 @@
                 <div class="fl">
                     <h2 class="stTitle2">Miền Trung</h2>
                     <ul class="ul-title">
-                        @foreach (var item in listPlace.Where(x => x.Area == 2))
-                        {
-                            <li>
-                                <a href="#">
-                                    <h3>@item.PlaceName</h3>
-                                </a>
-                            </li>
-                        }
+                     
                     </ul>
                 </div>
                 <div class="fr">
@@ -591,26 +533,21 @@
                 <div class="clear"></div>
             </div>
             <div class="slider-tour loadBottom slick-initialized slick-slider">
-
-
-
                 <div aria-live="polite" class="slick-list draggable">
                     <div class="slick-track"
                          style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);"
                          role="listbox">
                         <div style="width: 1200px;" class="wrap-item slick-slide slick-current slick-active">
-
-
                             @if (listProduct.Count() > 0)
                             {
 
-                                @foreach (var item in listProduct)
+                                @foreach (var item in listProduct.Where(x => x.AreaName == "MIEN_TRUNG"))
                                 {
 
                                     <div class="item col-md-3">
                                         <div class="item-tour tour-km">
                                             <div class="i-img">
-                                                <a href="#"
+                                                <a href="/home/tourDescription/@item.Id"
                                                    title="@item.Name"
                                                    tabindex="0">
                                                     <img src="@item.Logo"
@@ -626,7 +563,7 @@
                                             </div>
                                             <div class="i-desc">
                                                 <div class="i-title">
-                                                    <a href="#"
+                                                    <a href="/home/tourDescription/@item.Id"
                                                        tabindex="0">
                                                         @item.Name
                                                     </a>
@@ -639,23 +576,12 @@
                                         </div>
                                         <br />
                                     </div>
-
-
                                 }
                             }
-
-
-
-
                         </div>
-
-
-
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
     <div class="vnt-tintuc">
@@ -663,16 +589,7 @@
             <div class="style-title-1 lazyloading">
                 <div class="fl">
                     <h2 class="stTitle2">Miền Nam</h2>
-                    <ul class="ul-title">
-                        @foreach (var item in listPlace.Where(x => x.Area == 3))
-                        {
-                            <li>
-                                <a href="#">
-                                    <h3>@item.PlaceName</h3>
-                                </a>
-                            </li>
-                        }
-                    </ul>
+                    
                 </div>
                 <div class="fr">
                     <div class="div-sub">
@@ -698,13 +615,13 @@
                             @if (listProduct.Count() > 0)
                             {
 
-                                @foreach (var item in listProduct)
+                                @foreach (var item in listProduct.Where(x => x.AreaName == "MIEN_NAM"))
                                 {
 
                                     <div class="item col-md-3">
                                         <div class="item-tour tour-km">
                                             <div class="i-img">
-                                                <a href="#"
+                                                <a href="/home/tourDescription/@item.Id"
                                                    title="@item.Name"
                                                    tabindex="0">
                                                     <img src="@item.Logo"
@@ -720,7 +637,7 @@
                                             </div>
                                             <div class="i-desc">
                                                 <div class="i-title">
-                                                    <a href="#"
+                                                    <a href="/home/tourDescription/@item.Id"
                                                        tabindex="0">
                                                         @item.Name
                                                     </a>
@@ -733,23 +650,13 @@
                                         </div>
                                         <br />
                                     </div>
-
-
                                 }
                             }
-
-
-
-
                         </div>
-
-
-
                     </div>
                 </div>
 
             </div>
-
         </div>
     </div>
 </div>

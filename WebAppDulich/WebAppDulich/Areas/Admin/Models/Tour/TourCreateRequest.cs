@@ -53,5 +53,6 @@ namespace WebAppDulich.Areas.Admin.Models.Tour
         public string Vehicle { get; set; } //phương tiện
         public string PlaceName { get; set; }
         public string Time { get; set; }
+        public string AreaName { get; set; }
     }
 }

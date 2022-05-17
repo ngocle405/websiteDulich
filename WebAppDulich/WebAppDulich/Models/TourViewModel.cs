@@ -29,5 +29,6 @@ namespace WebAppDulich.Models
         public string PlaceName { get; set; }
         public string Time { get; set; }
         public string CategoryName { get; set; }
+        public string AreaName { get; set; }
     }
 }

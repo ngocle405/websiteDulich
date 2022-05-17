@@ -57,5 +57,6 @@ namespace WebAppDulich.Areas.Admin.Models.Tour
         public string PlaceName { get; set; }
         [Required(ErrorMessage = "Bạn phải nhập thời gian đi trong bao lâu")]
         public string Time { get; set; }
+        public string AreaName { get; set; }
     }
 }

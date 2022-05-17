@@ -29,7 +29,7 @@ namespace WebAppDulich.Models
         public decimal? TotalMoney { get; set; }
         public int? PaymentStatus { get; set; }
         public DateTime? CreatedDate { get; set; }
-
+        public long TourId { get; set; }
         public IEnumerable<OrderDetailViewModel> OrderDetails { set; get; }
     }
 }
