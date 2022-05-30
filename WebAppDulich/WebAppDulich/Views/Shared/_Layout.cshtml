@@ -48,6 +48,7 @@
             text-transform: uppercase;
             color: #0b7cc3;
         }
+
         .hTitle {
             font-size: 16px;
             line-height: 25px;
@@ -57,17 +58,20 @@
             text-transform: uppercase;
             font-weight: bold;
         }
+
         .box-detail {
             padding: 24px;
             border: 1px solid #dddddd;
             box-shadow: 2px 2px 4px rgb(0 0 0 / 5%);
             margin-bottom: 15px;
         }
+
         .tDetal .tImg {
             width: 90px;
             float: left;
             margin-right: 10px;
         }
+
         .tDetal .tTitle {
             /* font-size: 16px; */
             /* line-height: 22px; */
@@ -75,10 +79,12 @@
             font-weight: bold;
             max-height: 66px;
         }
+
         .box-detail .box-info-item {
             border-bottom: 1px solid #dddddd;
             padding: 8px 0;
         }
+
         .box-detail-tour {
             border: 1px solid #dddddd;
             margin-bottom: 20px;
@@ -87,6 +93,7 @@
             box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
             padding: 15px;
         }
+
         .title-main {
             font-size: 30px;
             line-height: 40px;
@@ -100,19 +107,30 @@
         <div id="vnt-container">
             <!--=== BEGIN: HEADER ===-->
 
+            <div class="w-fixed-menu hidden-sm hidden-xs">
+                <div class="mnfixed_wrap" style="position: relative; height: 40px;">
+                    <div class="mnfixed_self" style="z-index: 112; width: 1519px; left: 0px; position: initial; top: 0px;">
+                        <div class="fixed-menu">
+                            <div class="wrapper">
+                                <div class="vnt-fixed-menu">
+                                    <ul>
+                                        <li class="current"><a href="@Url.Action("Index","Home")"><i class=" fas fa-home"></i></a></li>
+                                        <li class=""><a href="https://chungtoi.dulichvietnam.com.vn/">Về chúng tôi</a></li>
+                                        <li class=" "><a href="@Url.Action("TourBookingGuide","Home")">Hướng dẫn đặt tour</a></li>
+                                        <li>
+                                            <a href="@Url.Action("DepartureSchedule","Home")">Lịch khởi hành</a>
+                                        </li>
+                                        <li class=""><a href="#">Hướng dẫn thanh toán</a></li>
+                                        <li class=" "><a href="@Url.Action("Contact","home")">Liên hệ</a></li>
 
-            
-
-            <div class="w-fixed-menu hide-on-small">
-                <div class="fixed-menu">
-                    <div class="wrapper">
-                    
-                        
+                                        <li class=""><a href="@Url.Action("news","home")">Tin tức</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
             <!--=== END: HEADER ===-->
             <!--=== BEGIN: CONTENT ===-->
             @RenderBody()
@@ -434,7 +452,7 @@
                                                     </a>&nbsp;
                                                 </strong>(Nội
                                                 địa)<br>
-                                            <strong>
+                                                <strong>
                                                     HCM &amp; Miền
                                                     Nam:
                                                 </strong>&nbsp;<strong>
@@ -445,7 +463,7 @@
                                                         </span>
                                                     </a>
                                                 </strong>(Nội địa)<br>
-                                               <strong>
+                                                <strong>
                                                     ĐN &amp; Miền
                                                     Trung:
                                                 </strong>&nbsp;<strong>
@@ -634,7 +652,7 @@
                                     <div class="title-footer">Tải Ứng Dụng</div>
                                     <div class="content-footer">
                                         <div>
-                                            <i class='fas fa-address-book' ></i>
+                                            <i class='fas fa-address-book'></i>
                                             <a href="#">
                                                 google-play200
                                             </a>
@@ -786,7 +804,7 @@
                                            . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước _ Du Lịch Việt
                                            Nam_files /icon_visa16.png" alt="Visa, hộ chiếu"> Visa, hộ chiếu</a>
                                     </li>
-                            
+
                                     <li class="">
                                         <a href="https://dulichvietnam.com.vn/tour/#"
                                            target="_blank" "=" "><img src=" . /Chuyên Tour Du Lịch Trong &amp; Ngoài Nước
@@ -900,20 +918,20 @@
                             <div class="m-ab" data-item="1">
                                 <div class="m-ab-arrow"><a href="javascript:void(0);" title="">Trở về</a></div>
                                 <div class="m-ab-title">
-                                    <a href="https://chungtoi.dulichvietnam.com.vn/"
+                                    <a href="#"
                                        target="_blank">Về chúng tôi</a>
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="https://chungtoi.dulichvietnam.com.vn/giay-phep-lhqt/trung-tam-lu-hanh/"
+                                        <a href="#"
                                            target="_self">Hoàng Việt Open</a>
                                     </li>
                                     <li>
-                                        <a href="https://dulichvietnam.com.vn/tour/shd-travel-da-nang.html"
+                                        <a href="#"
                                            target="_self">SHD travel Đà Nẵng</a>
                                     </li>
                                     <li>
-                                        <a href="https://dulichvietnam.com.vn/tour/lu-hanh-viet-nam.html"
+                                        <a href="#"
                                            target="_self">Lữ Hành Việt Nam</a>
                                     </li>
                                 </ul>
@@ -921,24 +939,24 @@
                             <div class="m-ab" data-item="2">
                                 <div class="m-ab-arrow"><a href="javascript:void(0);" title="">Trở về</a></div>
                                 <div class="m-ab-title">
-                                    <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html"
+                                    <a href="#l"
                                        target="_self">LỊCH KHỞI HÀNH</a>
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=1&amp;destination=0&amp;cat_id=0"
+                                        <a href="#"
                                            target="_self">Lịch khởi hành từ Hà Nội</a>
                                     </li>
                                     <li>
-                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=2&amp;destination=0&amp;cat_id=0"
+                                        <a href="#"
                                            target="_self">Lịch khởi hành từ Tp HCM</a>
                                     </li>
                                     <li>
-                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=3&amp;destination=0&amp;cat_id=0"
+                                        <a href="#"
                                            target="_self">Lịch khởi hành từ Đà Nẵng</a>
                                     </li>
                                     <li>
-                                        <a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html?departure=39&amp;destination=0&amp;cat_id=0"
+                                        <a href="#"
                                            target="_self">Lịch khởi hành từ Hải Phòng</a>
                                     </li>
                                 </ul>
@@ -958,88 +976,88 @@
         <script src="https://w.ladicdn.com/ladichat/sdk.js" id="61b9c76de50d0b001320d02c_61dd0dfc078b250012243e5e" async></script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
         <script type="text/javascript" src="https://dulichvietnam.com.vn/tour/plugins/support_fixed/js/support_fixed.js?v=1.0"></script>
-     
+
         <link href="https://dulichvietnam.com.vn/tour/plugins/support_fixed/css/support_fixed.css?v=1.0" rel="stylesheet" type="text/css" />
-            <div id="vnt-menu-fix">
-                <ul class="desktopFx">
-                    <li class="phoneFx">
-                        <a rel="nofollow" href="javascript:void(0);" class="s-popup vhtoa icon">
-                            <i class="vhrung fa fa-phone"></i>
-                        </a>
-                        <div id="vnt-popup-hotline" style="width:400px; max-width: 100%; display: none;">
+        <div id="vnt-menu-fix">
+            <ul class="desktopFx">
+                <li class="phoneFx">
+                    <a rel="nofollow" href="javascript:void(0);" class="s-popup vhtoa icon">
+                        <i class="vhrung fa fa-phone"></i>
+                    </a>
+                    <div id="vnt-popup-hotline" style="width:400px; max-width: 100%; display: none;">
 
-                            <div class="support-content">
-                                <div class="phoneTitle">Hotline</div>
-                                <div class="phoneInfo">
-                                    <ul class="list-call">
-                                        <li>
-                                            <div class="p-label">Khách hàng tại miền Bắc</div>
-                                            <div class="p-val">
-                                                <a href="tel:0936 206 998" rel="nofollow">0936 206 998</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-label">Khách hàng tại miền Nam</div>
-                                            <div class="p-val">
-                                                <a href="tel:0904 555 908" rel="nofollow">0904 555 908</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-label">Khách hàng tại miền Trung</div>
-                                            <div class="p-val">
-                                                <a href="tel:0906 298 055" rel="nofollow">0906 298 055</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="support-content">
+                            <div class="phoneTitle">Hotline</div>
+                            <div class="phoneInfo">
+                                <ul class="list-call">
+                                    <li>
+                                        <div class="p-label">Khách hàng tại miền Bắc</div>
+                                        <div class="p-val">
+                                            <a href="tel:0936 206 998" rel="nofollow">0936 206 998</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="p-label">Khách hàng tại miền Nam</div>
+                                        <div class="p-val">
+                                            <a href="tel:0904 555 908" rel="nofollow">0904 555 908</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="p-label">Khách hàng tại miền Trung</div>
+                                        <div class="p-val">
+                                            <a href="tel:0906 298 055" rel="nofollow">0906 298 055</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </li>
-                    <li class="emailFx">
-                        <a href="javascript:void(0)" rel="nofollow" class="popupCRM">
-                            <span class="icon">
-                                <i class='fas fa-heart'></i>
-                            </span>
-                        </a>
-                        <div id="popupCRM" style="width:500px; max-width: 100%;  display: none;">
-                            <div id="getfly-optin-form-iframe-1646629350888">
-                                <iframe src="/tour/vnt_upload/File/01_2021/saved_resource.html"
-                                        frameborder="0" marginheight="0" marginwidth="0"
-                                        style="width: 100%; height: 500px;"></iframe>
-                            </div>
-                            <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } if ((!url_string.has('utm_user') || url_string.get('utm_user') == '') && document.cookie.match(new RegExp('utm_user' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_user' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_user') != null ? "&utm_user=" + url_string.get('utm_user') : ""; } if ((!url_string.has('utm_account') || url_string.get('utm_account') == '') && document.cookie.match(new RegExp('utm_account' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_account' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_account') != null ? "&utm_account=" + url_string.get('utm_account') : ""; } r += "&full_url=" + encodeURIComponent(window.location.href); f.setAttribute("src", "https://dlvn.getflycrm.com/api/forms/viewform/?key=RGIz6VvXzoEXi5jJosCBUGpLIlLksFTBW74QFEqsLlkwE7EO8j&referrer=" + r); f.style.width = "100%"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1646629350888"); s.appendChild(f); })();</script>
+                    </div>
+                </li>
+                <li class="emailFx">
+                    <a href="javascript:void(0)" rel="nofollow" class="popupCRM">
+                        <span class="icon">
+                            <i class='fas fa-heart'></i>
+                        </span>
+                    </a>
+                    <div id="popupCRM" style="width:500px; max-width: 100%;  display: none;">
+                        <div id="getfly-optin-form-iframe-1646629350888">
+                            <iframe src="/tour/vnt_upload/File/01_2021/saved_resource.html"
+                                    frameborder="0" marginheight="0" marginwidth="0"
+                                    style="width: 100%; height: 500px;"></iframe>
                         </div>
-                    </li>
-                    <li class="facebookFx">
-                        <a href="https://m.me/dulichvietnam.com.vn" rel="nofollow" target="_blank">
-                            <span class="icon ">
-                                <i class='fas fa-phone-volume'></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="zaloFx">
-                        <a href="https://zalo.me/3778692002577823626" rel="nofollow" target="_blank">
-                            <span class="icon">
-                                <i class='fas fa-star'></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="gotopFx">
-                        <a href="javascrip:void(0)" onclick="animate({scrollTop: 0},1000);" rel="nofollow">
-                            <i class="fas fa-arrow-up"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } if ((!url_string.has('utm_user') || url_string.get('utm_user') == '') && document.cookie.match(new RegExp('utm_user' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_user' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_user') != null ? "&utm_user=" + url_string.get('utm_user') : ""; } if ((!url_string.has('utm_account') || url_string.get('utm_account') == '') && document.cookie.match(new RegExp('utm_account' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_account' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_account') != null ? "&utm_account=" + url_string.get('utm_account') : ""; } r += "&full_url=" + encodeURIComponent(window.location.href); f.setAttribute("src", "https://dlvn.getflycrm.com/api/forms/viewform/?key=RGIz6VvXzoEXi5jJosCBUGpLIlLksFTBW74QFEqsLlkwE7EO8j&referrer=" + r); f.style.width = "100%"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1646629350888"); s.appendChild(f); })();</script>
+                    </div>
+                </li>
+                <li class="facebookFx">
+                    <a href="#" rel="nofollow" target="_blank">
+                        <span class="icon ">
+                            <i class='fas fa-phone-volume'></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="zaloFx">
+                    <a href="# rel="nofollow" target="_blank">
+                        <span class="icon">
+                            <i class='fas fa-star'></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="gotopFx">
+                    <a href="javascrip:void(0)" onclick="animate({scrollTop: 0},1000);" rel="nofollow">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
 
 
-        </div><a href="javascript:void(0)" class="go_top" style="display:none"></a>
- 
+    </div><a href="javascript:void(0)" class="go_top" style="display:none"></a>
 
-        
 
-     
+
+
+
 
 </body>
 </html>

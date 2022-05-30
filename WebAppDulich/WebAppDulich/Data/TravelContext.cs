@@ -179,9 +179,9 @@ namespace WebAppDulich.Data
             {
                 entity.Property(e => e.CreateDate).HasColumnType("datetime");
 
-                entity.Property(e => e.Description).HasColumnType("text");
+                entity.Property(e => e.Description);
 
-                entity.Property(e => e.Detail).HasColumnType("text");
+                entity.Property(e => e.Detail);
 
                 entity.Property(e => e.EditDate).HasColumnType("datetime");
 
@@ -308,7 +308,7 @@ namespace WebAppDulich.Data
                 entity.Property(e => e.DeparturePoint).HasMaxLength(50);
                 entity.Property(e => e.CategoryName).HasMaxLength(50);
 
-                entity.Property(e => e.Description).HasColumnType("text");
+                entity.Property(e => e.Description);
 
                 entity.Property(e => e.Destination).HasMaxLength(50);
 

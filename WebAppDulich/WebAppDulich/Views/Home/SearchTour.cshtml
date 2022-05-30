@@ -1,0 +1,347 @@
+﻿
+@{
+    var ListTour = (List<WebAppDulich.Data.Tour>)ViewBag.ListTour;
+    ViewData["Title"] = "SearchTour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .box-filter {
+        border: 1px solid #dddddd;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
+        -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
+    }
+    .box-filter .item-filter {
+        padding: 15px;
+        border-bottom: 1px solid #dddddd;
+    }
+    .filterTitle {
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #0062a7;
+        text-transform: uppercase;
+    }
+    .box-filter .filter-title {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        background: #f6f6f6;
+        padding: 10px 15px;
+    }
+    .block-filter .grid {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        margin: 0 -10px;
+        flex-wrap: wrap;
+    }
+    .tour-detail {
+        border: 1px solid #dddddd;
+        -webkit-box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
+        -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
+        padding: 19px;
+    }
+
+    element.style {
+    }
+
+    .tour-detail .i-img {
+        width: 240px;
+         margin-right: 20px; 
+         float: left; 
+    }
+    .tour-detail .i-info {
+        width: 160px;
+        float: right;
+        text-align: right;
+    }
+    .tour-detail .i-desc {
+        float: left;
+        width: -webkit-calc(100% - 440px);
+        width: -moz-calc(100% - 440px);
+        width: calc(100% - 440px);
+    }
+    .tour-detail .i-price {
+        font-size: 22px;
+        line-height: 30px;
+        color: #d82727;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+</style>
+<div id="vnt-content">
+    <div class="bg-search">
+        <div class="style-search">
+            <div class="wrapper">
+                <div class="form-search">
+                    <div class="fs-row">
+                        <div class="fs-cel fs-search">
+                            <div class="sp20 bre">
+                                <div class="title-search">TÌM TOUR THEO ĐIỂM ĐẾN</div>
+                                <form id="formSearch" name="formSearch" method="post" action="https://dulichvietnam.com.vn/tour/tour.html">
+                                    <div class="typeAHeadDiv" id="typeAHeadDiv">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control typeahead tt-hint" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(238, 238, 238);"><input type="text" class="form-control typeahead tt-input" name="keyword" id="idSearch" placeholder="Tên thành phố, khu vực ..." autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Muli, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-locations"></div><div class="tt-dataset tt-dataset-pointofinterests"></div><div class="tt-dataset tt-dataset-tours"></div><div class="tt-dataset tt-dataset-popularLocation"></div></div></span>
+                                                <span class="input-group-btn">
+                                                    <button class="btn searchButton" id="searchButton"><span><i class="fab fa-sistrix"></i></span></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="fs-cel fs-tour">
+                            <div class="sp20">
+                              
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <link href="https://dulichvietnam.com.vn/tour/js/search/search.css" rel="stylesheet" type="text/css">
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="vnt-navation" class="breadcrumb">
+        <div class="wrapper">
+            <div class="navation">
+                <ul><li><a href="https://dulichvietnam.com.vn/tour/">Trang chủ</a></li><li><a href="https://dulichvietnam.com.vn/tour/tour.html">Tour du lịch</a></li></ul>
+            </div>
+        </div>
+    </div>
+    <div class="box_mid">
+        <div class="wrapper">
+            <div class="mid-title">
+                <div class="fl"><h1 class="title-main">Tour du lịch</h1></div>
+                <div class="fr">
+                    
+                    <div class="hidden-lg hidden-md visible-sm visible-xs">
+                        <div class="popup_mobile" id="sapxep">
+                            <div class="pmTitle">Sắp xếp</div>
+                            <div class="pmClose"><i class="fa fa-times"></i></div>
+                            <div class="pmContent">
+                                <div class="list-filter">
+                                    <ul>
+                                        <li class="current"><a href="https://dulichvietnam.com.vn/tour/tour.html/?sort=0" class="current">Sắp xếp theo</a></li>
+                                        <li><a href="https://dulichvietnam.com.vn/tour/tour.html/?sort=1">Mới nhất</a></li>
+                                        <li><a href="https://dulichvietnam.com.vn/tour/tour.html/?sort=2">Giá tăng dần</a></li>
+                                        <li><a href="https://dulichvietnam.com.vn/tour/tour.html/?sort=3">Giá giảm dần</a></li>
+                                        <li><a href="https://dulichvietnam.com.vn/tour/tour.html/?sort=4">Xem nhiều</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="mid-content">
+                <div class="hidden-lg hidden-md visible-sm visible-xs">
+                    
+                </div>
+                <div class="row cel-p10">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="popup_mobile">
+                            <div class="pmContent">
+                                <div class="box-filter">
+                                    <div class="filter-title">TÌM KIẾM</div>
+                                    <div class="item-filter">
+                                        <div class="filterTitle"><h2>Theo loại hình</h2></div><div class="filterContent">
+                                            <ul class="ul_filter">
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?cat_id=36">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Tour lễ 30.4</span>
+                                                    </label>
+                                                </li>
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?cat_id=22">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Tour bán chạy, HOT</span>
+                                                    </label>
+                                                </li>
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?cat_id=13">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Tour ngắn tại điểm, City tour, hàng ngày</span>
+                                                    </label>
+                                                </li>
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?cat_id=12">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Tour lẻ ghép đường bay</span>
+                                                    </label>
+                                                </li>
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?cat_id=35">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Tour lẻ ghép đường bộ</span>
+                                                    </label>
+                                                </li>
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?cat_id=30">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Tour cho khách đoàn, Gala, Teambuilding</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item-filter group open">
+                                        <div class="filterTitle"><h2>ĐIỂM ĐẾN</h2></div>
+                                        <div class="filterTitle sub">NỘI ĐỊA<div class="btn-more-less"><span class="less"></span></div></div><div class="filterContent">
+                                            <ul class="ul_filter">
+                                                <li class="li-show">
+                                                    <label class="current" data-link="https://dulichvietnam.com.vn/tour/tour.html/?place_id=56">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="check"></span>
+                                                        <span>Miền Bắc</span>
+                                                    </label>
+
+                                                </li>
+                                                <li class="li-show">
+                                                    <a data-toggle="collapse" href="#divPoint_4" aria-expanded="false" aria-controls="divPoint_4" class="arr-sub collapsed"><i class="fas fa-angle-down"></i></a>
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?place_id=1">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Hà Nội</span>
+                                                    </label>
+                                                    <ul class="collapse " id="divPoint_4"><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=6&amp;place_id=1"><input type="checkbox"><span class="check"></span> <span>Chùa Một Cột</span></label></li><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=4&amp;place_id=1"><input type="checkbox"><span class="check"></span> <span>Hồ Hoàn Kiếm</span></label></li></ul>
+                                                </li>
+                                                <li class="li-show">
+                                                    <a data-toggle="collapse" href="#divPoint_31" aria-expanded="false" aria-controls="divPoint_31" class="arr-sub collapsed"><i class="fas fa-angle-down"></i></a>
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?place_id=30">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Sapa</span>
+                                                    </label>
+                                                    <ul class="collapse " id="divPoint_31"><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=31&amp;place_id=30"><input type="checkbox"><span class="check"></span> <span>Thị trấn Sapa</span></label></li></ul>
+                                                </li>
+                                                <li class="li-show">
+                                                    <a data-toggle="collapse" href="#divPoint_57" aria-expanded="false" aria-controls="divPoint_57" class="arr-sub collapsed"><i class="fas fa-angle-down"></i></a>
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?place_id=31">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Hà Giang</span>
+                                                    </label>
+                                                    <ul class="collapse " id="divPoint_57"><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=82&amp;place_id=31"><input type="checkbox"><span class="check"></span> <span>Mèo Vạc</span></label></li><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=58&amp;place_id=31"><input type="checkbox"><span class="check"></span> <span>Thung lũng Sủng Là</span></label></li><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=57&amp;place_id=31"><input type="checkbox"><span class="check"></span> <span>Đồng Văn</span></label></li></ul>
+                                                </li>
+                                                <li class="li-show">
+                                                    <a data-toggle="collapse" href="#divPoint_64" aria-expanded="false" aria-controls="divPoint_64" class="arr-sub collapsed"><i class="fas fa-angle-down"></i></a>
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?place_id=71">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Vĩnh Phúc</span>
+                                                    </label>
+                                                    <ul class="collapse " id="divPoint_64"><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=83&amp;place_id=71"><input type="checkbox"><span class="check"></span> <span>Tam Đảo</span></label></li><li><label data-link="https://dulichvietnam.com.vn/tour/tour.html/?point_id=64&amp;place_id=71"><input type="checkbox"><span class="check"></span> <span>Đại Lải</span></label></li></ul>
+                                                </li>
+                                                <li class="li-show">
+                                                    <label data-link="https://dulichvietnam.com.vn/tour/tour.html/?place_id=91">
+                                                        <input type="checkbox">
+                                                        <span class="check"></span>
+                                                        <span>Vinh</span>
+                                                    </label>
+
+                                                </li>
+                                                
+                                                
+                                            </ul><div class="div-more-less"><span class="txt-more">Xem thêm</span><span class="txt-less">Rút gọn</span></div>
+                                        </div>
+                                        <div class="filterTitle sub">QUỐC TẾ<div class="btn-more-less"><span class="less"></span></div></div><div class="filterContent">
+                                            <div class="div-more-less"><span class="txt-more">Xem thêm</span><span class="txt-less">Rút gọn</span></div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="div_adv hidden-sm hidden-xs">
+                            <div class="advertise"><a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html" title="" onmousedown="return rwt(this,'advertise','27')" target="_blank"><img src="https://dulichvietnam.com.vn/tour/vnt_upload/weblink/banner-lich-khoi-hanh.png" alt=""></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+
+                        <div class="block-filter">
+                            
+                        </div>
+
+                        <div class="list-tour" id="ext_load_more">
+                            @if (ListTour.Count() > 0)
+                            {
+                                foreach (var item in ListTour)
+                                {
+                                <div class="item">
+                                    <div class="tour-detail">
+                                        <div class="i-img">
+                                            <a href="/home/OrderTour/@item.Id">
+                                                <img src="@item.Logo" alt="@item.Logo">
+                                            </a>
+                                            <div class="ribbon"><div class="rib" style="background-color: #d82727;  border-color: #d82727">TOUR BÁN CHẠY</div></div>
+                                        </div>
+                                        <div class="i-desc">
+                                            <div class="i-title">
+                                                <h3 class="title"><a href="/home/OrderTour/@item.Id">@item.Name</a></h3>
+                                            </div>
+                                            <div class="i-content">
+                                                <div><strong>Loại hình:</strong>@item.CategoryName</div>
+                                                <div><strong>Điểm đi:</strong> @item.DeparturePoint</div>
+                                                <div><strong>Điểm đến:</strong> @item.PlaceName</div>
+                                                <div><strong>Địa danh:</strong> @item.Destination</div>
+                                                <div><strong>Thời gian:</strong> @item.Time</div>
+                                                <div><strong>Ghi chú:</strong> Xuất phát @item.Start</div>
+                                            </div>
+                                        </div>
+                                        <div class="i-info">
+                                            <div>Giá 1 khách</div>
+                                            <div class="i-price"> @double.Parse(item.Price.ToString()).ToString("#,##0")   đ</div>
+
+                                            <div>
+                                                <a class="btn btn-danger" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                            </div>
+                                            <div class="i-icon" style="display: none">
+                                                <ul>
+                                                    <li title="Máy bay"><i class="fa fa-plane"></i></li>
+                                                    <li title="Ô tô"><i class="fa fa-bus"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                }
+                            }
+                            </div>
+                        <div class="tour-desc desc"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

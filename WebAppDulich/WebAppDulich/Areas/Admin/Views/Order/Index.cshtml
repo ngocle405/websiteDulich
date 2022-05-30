@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebAppDulich.Data.Order>
+
+@{
+    var lst = (IEnumerable<WebAppDulich.Data.Order>)ViewBag.lst;
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/_LayoutAdmin.cshtml";
+}
+
+<input type="hidden" id="success" value="@TempData["success"]" />
+<input type="hidden" id="warning" value="@TempData["warning"]" />
+<input type="hidden" id="error" value="@TempData["error"]" />
+<div class="container-fluid">
+    <h1 class="mt-4">Danh sách đơn đặt tour</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Danh sách đơn đã đặt</li>
+    </ol>
+    <div class="card mb-12">
+        <div class="card-body">
+            <div class="table-responsive">
+                @if (lst.Count() > 0)
+                {
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Người đặt tour</th>
+                            
+                                <th>Email</th>
+                                <th>Điện thoại</th>
+                                <th>Giá tiền</th>
+                                <td>Tên tour</td>
+                                <th>Trạng thái</th>
+                                <th>Ngày đăng ký</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                var stt = 0;
+                                @foreach (var item in lst)
+                                {
+                            <tr>
+                                <td>@Html.Raw(stt = stt + 1)</td>
+                                <td>@item.OrderName</td>
+
+                                <td>@item.OrderEmail</td>
+                                <td>@item.OrderPhone</td>
+                                <td> @item.TotalMoney   đ</td>
+                                <td>@item.TourName</td>
+
+
+                                @if (item.PaymentStatus == 2)
+                                {
+                                    <td><span class="btn-success">Hoạt động</span></td>
+                                }
+                                @if (item.PaymentStatus == 1)
+                                {
+                                    <td><span class="btn-danger">Khách hàng hủy</span></td>
+                                }
+                                @if (item.PaymentStatus == 0 || item.PaymentStatus == null)
+                                {
+                                    <td><span class="btn-warning">Chờ liên hệ</span></td>
+                                }
+                                <td>@item.CreatedDate.ToString(string.Format("dd/MM/yyyy"))</td>
+                                <td>
+                                    <a href="/Admin/Order/Edit/@item.Id" class="btn btn-primary glyphicon glyphicon-pencilt">Sửa</a>
+
+                                </td>
+                            </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <span>Không đơn đặt tour nào</span>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

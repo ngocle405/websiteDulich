@@ -16,6 +16,7 @@ namespace WebAppDulich.Data
         public decimal? TotalMoney { get; set; }
         public int? PaymentStatus { get; set; }
         public long TourId { get; set; }
-        public DateTime? CreatedDate { get; set; }
+        public string TourName { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebAppDulich.Data.Tour>
+
+@{
+    var listProduct = (IEnumerable<WebAppDulich.Models.TourViewModel>)ViewBag.ListProduct;
+    ViewData["Title"] = "DepartureSchedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="vnt-content">
+    <div id="vnt-navation" class="breadcrumb">
+        <div class="wrapper">
+            <div class="navation">
+                <ul><li><a href="https://dulichvietnam.com.vn/tour/">Trang chủ</a></li><li><a href="https://dulichvietnam.com.vn/tour/lich-khoi-hanh.html">Lịch khởi hành tour tổng hợp</a></li></ul>
+            </div>
+        </div>
+    </div>
+    <div class="box_mid">
+        <div class="wrapper">
+            <div class="mid-title">
+                <h1 class="title-main">Lịch khởi hành tour tổng hợp</h1>
+            </div>
+            <div class="mid-content">
+                <div class="the-content desc">
+                    <div style="text-align: justify;">Dùng bộ lọc dưới đây, chọn “<span style="color:#d82727;"><strong>Điểm khởi hành</strong></span>”, “<span style="color:#d82727;"><strong>Điểm đến</strong></span>” hay “<span style="color:#d82727;"><strong>Loại tour</strong></span>” bạn sẽ nhanh chóng tìm được tour du lịch phù hợp với nhu cầu</div>
+                </div>
+                <div class="box-search-lkh">
+                    
+                </div>
+                <div class="table-list-km">
+                    <div class="hidden-sm hidden-xs">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td><div class="text-center">STT</div></td>
+                                    <td>Tên tour</td>
+                                    <td>Thời gian</td>
+                                    <td>Giá tour<br>(VNĐ/Khách)</td>
+                                    <td>Khởi hành</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var stt = 0;
+
+                                    @foreach (var item in listProduct)
+                                    {
+
+
+                                        <tr>
+                                            <td>
+                                                <div class="text-center">@Html.Raw(stt = stt + 1)</div>
+                                            </td>
+                                            <td><h2 class="fs14" style="display: inline"><a href="#" target="_blank">@item.Name</a></h2><div class="ribbon"></div> </td>
+                                            <td nowrap="">@item.Time</td>
+                                            <td nowrap="">@Convert.ToDecimal(item.Price).ToString("N0")  đ</td>
+                                            <td>8:00 AM ;   @item.Start.ToString(string.Format("dd/MM/yyyy"))</td>
+
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

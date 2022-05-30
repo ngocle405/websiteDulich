@@ -143,7 +143,6 @@ C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\bin\Deb
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\WebAppDulich.csproj.AssemblyReference.cache
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\WebAppDulich.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\WebAppDulich.AssemblyInfoInputs.cache
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\WebAppDulich.AssemblyInfo.cs
@@ -178,7 +177,6 @@ C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Deb
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Areas\Admin\Views\_LayoutAdmin.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -268,3 +266,14 @@ C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\bin\Deb
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\TourDescription.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\OrderTour.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\SearchTour.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\SearchTourForCategory.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\WebAppDulich.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\SearchTourForPlace.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\TourBookingGuide.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\DepartureSchedule.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Areas\Admin\Views\Order\Edit.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\News.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\NewDescription.cshtml.g.cs

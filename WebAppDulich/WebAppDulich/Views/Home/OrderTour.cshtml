@@ -7,8 +7,18 @@
 }
 <style>
 </style>
-<div id="vnt-content">
+<input type="hidden" id="success" value="@TempData["success"]" />
+<input type="hidden" id="warning" value="@TempData["warning"]" />
+<input type="hidden" id="error" value="@TempData["error"]" />
 
+<div id="vnt-content">
+    <div id="vnt-navation" class="breadcrumb">
+        <div class="wrapper">
+            <div class="navation">
+                <ul><li><a href="@Url.Action("Index","Home")">Trang chủ</a></li><li><a href="">Tour du lịch</a></li><li>Đặt tour</li><li class="hidden-xs"><a href="#">@tour.Name</a></li></ul>
+            </div>
+        </div>
+    </div>
 
     <div class="box_mid">
         <div class="wrapper">
@@ -26,7 +36,7 @@
                                     <div class="clear"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="box-info-item">
                                 <div class="text-large">
                                     <div class="fl">Tổng cộng</div>
@@ -40,11 +50,13 @@
                         <form asp-action="Order" asp-controller="Home" method="post" class="validate">
                             <div class="div_input"><input type="hidden" class="form-control required" asp-for="TourId" value="@tour.Id"></div>
                             <div class="div_input"><input type="hidden" class="form-control required" asp-for="TotalMoney" value="@tour.Price"></div>
+                            <div class="div_input"><input type="hidden" class="form-control required" asp-for="TourName" value="@tour.Name"></div>
                             <div class="box-detail">
                                 <div class="hTitle">Thông tin đặt tour</div>
                                 <div class="mb15">
                                     <label>Họ và tên <span class="color1">*</span></label>
                                     <div class="div_input"><input type="text" class="form-control required" asp-for="OrderName" title="Vui lòng nhập họ tên" aria-required="true"></div>
+                                    <span asp-validation-for="OrderName" class="text-danger"></span>
                                 </div>
                                 <div class="row cel-p10">
 
@@ -52,12 +64,14 @@
                                         <div class="mb15">
                                             <label>Sô điện thoại <span class="color1">*</span></label>
                                             <div class="div_input"><input type="text" class="form-control required" asp-for="OrderPhone" title="Vui lòng nhập điện thoại" aria-required="true"></div>
+                                            <span asp-validation-for="OrderPhone" class="text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <div class="mb15">
                                             <label>Email <span class="color1">*</span></label>
                                             <div class="div_input"><input type="text" class="form-control required" asp-for="OrderEmail" type="text" aria-required="true"></div>
+                                            <span asp-validation-for="OrderEmail" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -65,6 +79,7 @@
                                 <div class="mb15">
                                     <label>Địa chỉ</label>
                                     <div class="div_input"><input type="text" class="form-control required" asp-for="OrderAddress" type="text" aria-required="true"></div>
+                                    <span asp-validation-for="OrderAddress" class="text-danger"></span>
                                 </div>
                                 <div class="mb15">
                                     <label>Ghi chú</label>

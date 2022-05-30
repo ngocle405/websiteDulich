@@ -36,6 +36,7 @@ namespace WebAppDulich
             services.AddTransient<ICategoryNewService, CategoryNewService>();
             services.AddTransient<INewsService, NewsService>();
             services.AddTransient<ISlideService, SlideService>();
+            services.AddTransient<IOrderService, OrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +62,7 @@ namespace WebAppDulich
              name: "areas",
              pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
              );
+             
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

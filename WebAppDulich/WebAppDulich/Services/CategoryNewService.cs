@@ -152,12 +152,12 @@ namespace WebAppDulich.Services
                 category.DisplayOrder = request.DisplayOrder;
                 category.Status = request.Status;
                 category.ShowHome = request.ShowHome;
-                 _travelContext.SaveChanges();
+                 var rs=_travelContext.SaveChanges();
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return -1;
+                throw ex;
             }
         }
     }

@@ -38,9 +38,9 @@ namespace WebAppDulich.Services
                 {
                     PlaceName = request.PlaceName,
                     Description = request.Description,
-                    ShowHome=request.ShowHome,
+                    ShowHome = request.ShowHome,
                     Status = 1,
-                    Area=1
+                    Area = request.Area
                 };
                 _travelContext.Places.Add(Place);
                 int res = _travelContext.SaveChanges();
@@ -86,7 +86,8 @@ namespace WebAppDulich.Services
                     PlaceName = Place.PlaceName,
                     ShowHome = Place.ShowHome,
                     Description = Place.Description,
-                    Status = 1
+                    Status = 1,
+                    Area=Place.Area
                 };
 
                 return updatePlacesViewModel;
@@ -115,6 +116,7 @@ namespace WebAppDulich.Services
                 Place.Description = request.Description;
                 Place.Status = request.Status;
                 Place.ShowHome = request.ShowHome;
+                Place.Area = request.Area;
                 _travelContext.SaveChanges();
                 return 1;
             }

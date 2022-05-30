@@ -39,7 +39,7 @@
                                 <th>Tên</th>
                                 <th>Danh mục</th>
                                 <th>Giá</th>
-                                <th>Giảm giá</th>
+                             
                                 <th>Địa điểm</th>
                                 <th>Trạng thái</th>
                                 <th>#</th>
@@ -56,15 +56,15 @@
                                 <td>@item.Name</td>
                                 <td>@item.CategoryName</td>
                                 <td>@item.Price</td>
-                                <td>@item.PriceDiscount</td>
+                               
                                 <td>@item.PlaceName</td>
                                 @if (item.Status == 1)
                                 {
-                                    <td><span class="btn-success">Còn hàng</span></td>
+                                    <td><span class="btn-success">Hoạt động</span></td>
                                 }
                                 else
                                 {
-                                    <td><span class="btn-danger"> Hết hàng</span></td>
+                                    <td><span class="btn-danger"> Khóa</span></td>
                                 }
                                 <td>
                                     <a href="/Admin/Tour/Edit/@item.Id" class="btn btn-primary glyphicon glyphicon-pencilt">Sửa</a>

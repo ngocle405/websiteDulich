@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebAppDulich.Data.News>
+
+@{
+    var lst = (IEnumerable<WebAppDulich.Data.News>)ViewBag.lst;
+    ViewData["Title"] = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="vnt-content">
+    <div id="vnt-navation" class="breadcrumb">
+        <div class="wrapper">
+            <div class="navation">
+                <ul><li><a href="@Url.Action("index","Home")">Trang chủ</a></li><li>Tin tức mới</li></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_mid">
+        <div class="wrapper">
+            <div class="mid-title">
+                <div class="title-main"><h1>Tin tức từ du lịch Việt Nam</h1></div>
+            </div>
+            <div class="mid-content">
+                <div class="region region-content">
+                    <section id="block-system-main" class="block block-system clearfix">
+                        <div class="block-content">
+                            <div class="view view-content-function view-id-content_function view-display-id-page_5 list-views row view-dom-id-5637221ba2403770c8e48a2cc8dd47e5">
+                                @foreach (var item in lst)
+                                {
+
+                                    <div class="view-content">
+                                        <div class="views-row views-row-1 views-row-odd views-row-first col-sm-3">
+                                            <div class="views-field views-field-field-news-image">
+                                                <div class="field-content">
+                                                    <a href="/home/NewDescription/@item.Id">
+                                                        <img typeof="foaf:Image"
+                                                             src="@item.Logo"
+                                                             width="270" height="210" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="views-field views-field-nothing ">
+                                                <span class="field-content">
+                                                    <div class="title mt-2">
+                                                        <a href="/home/NewDescription/@item.Id">
+                                                            @item.Name
+                                                        </a>
+                                                    </div>
+                                                    <br />
+                                                    <div class="footer_product">
+                                                        <br />
+                                                        <div class="footer_left pull-left">
+                                                            <div class="post_date">@item.CreateDate</div>
+                                                        </div>
+
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                }
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
