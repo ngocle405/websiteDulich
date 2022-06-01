@@ -61,6 +61,7 @@ namespace WebAppDulich.Controllers
                 ViewBag.ListTour = queryString;
                 ViewBag.keyword = keyword;
             }
+            ViewBag.ListProduct = _tourService.ShowTours();
             return View();
         }
         public SelectList loadCategory()
@@ -82,7 +83,7 @@ namespace WebAppDulich.Controllers
                 var queryString = _travelContext.Tours.Where(x => x.CategoryId == categoryId).ToList();
                 ViewBag.ListTour = queryString;
             }
-           
+            ViewBag.ListProduct = _tourService.ShowTours();
             return View();
         }
         public IActionResult SearchTourForPlace(long? placeId)
@@ -93,6 +94,7 @@ namespace WebAppDulich.Controllers
                 var queryString = _travelContext.Tours.Where(x => x.PlaceId == placeId).ToList();
                 ViewBag.ListTour = queryString;
             }
+            ViewBag.ListProduct = _tourService.ShowTours();
 
             return View();
         }
@@ -103,6 +105,7 @@ namespace WebAppDulich.Controllers
             ViewBag.ListProduct = _tourService.ShowTours();
             //ViewBag.ListProduct =  _travelContext.Tours.Where(a => a.PriceDiscount != null && a.DisplayOrder != null && a.Status == 1).OrderBy(x => x.DisplayOrder).Take(12).ToList();
             ViewBag.ListPlace = _travelContext.Places.Where(x => x.Status == 1).ToList();
+
             return View();
         }
         public IActionResult OrderTour(long id)
@@ -128,6 +131,7 @@ namespace WebAppDulich.Controllers
         }
         public IActionResult TourDescription(long id)
         {
+         
             var relatedProduct=  _travelContext.Tours.Select(p => new Tour()
             {
                 Id = p.Id,
@@ -153,8 +157,8 @@ namespace WebAppDulich.Controllers
                 ,
                 AreaName = p.AreaName
             }).SingleOrDefault(x => x.Id == id);
-          
-           // ViewBag.ListRelatedProduct = relatedProduct;
+            ViewBag.ListProduct = _tourService.ShowTours();
+            // ViewBag.ListRelatedProduct = relatedProduct;
             return View(relatedProduct);
         }
 

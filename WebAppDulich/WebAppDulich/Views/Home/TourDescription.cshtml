@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "TourDescription";
     Layout = "~/Views/Shared/_Layout.cshtml";
- //   var ListRelatedProduct = (List<WebAppDulich.Data.Tour>)ViewBag.ListRelatedProduct;
+    var ListProduct = (IEnumerable<WebAppDulich.Models.TourViewModel>)ViewBag.ListProduct;
 }
 
 <div id="vnt-wrapper">
@@ -179,32 +179,19 @@
                                         </div>
 
                                     </div>
-
-
-
                                     <br />
-
-                                    <!--===BEGIN: COMMENT==-->
-
                                     <div class="facebook-comment" style="padding-top:10px;">
                                         <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://dulichvietnam.com.vn/tour/tour-du-lich-bali-4-ngay-3-dem-tu-ho-chi-minh-bay-vietjet-air-ks-4-sao.html" data-width="100%" data-num-posts="5" data-colorscheme="light" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1305829822896074&amp;color_scheme=light&amp;container_width=803&amp;height=100&amp;href=https%3A%2F%2Fdulichvietnam.com.vn%2Ftour%2Ftour-du-lich-bali-4-ngay-3-dem-tu-ho-chi-minh-bay-vietjet-air-ks-4-sao.html&amp;locale=en_US&amp;sdk=joey&amp;width=" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 213px;"><iframe name="f54592afbfc1dc" width="1000px" height="100px" data-testid="fb:comments Facebook Social Plugin" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/comments.php?app_id=1305829822896074&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2f16c78506fe68%26domain%3Ddulichvietnam.com.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fdulichvietnam.com.vn%252Ff1b8a677df47974%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=803&amp;height=100&amp;href=https%3A%2F%2Fdulichvietnam.com.vn%2Ftour%2Ftour-du-lich-bali-4-ngay-3-dem-tu-ho-chi-minh-bay-vietjet-air-ks-4-sao.html&amp;locale=en_US&amp;sdk=joey&amp;width=" style="border: none; visibility: visible; width: 100%; height: 213px;" class=""></iframe></span></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
-
-
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
-
-
-
                         <div class="mb30">
                             <div class="style-title-1">
-                                <div class="fl"><h2 class="stTitle">Tour Indonesia khác</h2></div>
+                                <div class="fl"><h2 class="stTitle">Tour hot  khác</h2></div>
                                 <div class="fr">
                                     <div class="link-more-2">
-                                        <a href="https://dulichvietnam.com.vn/tour/indonesia.html">Xem thêm</a>
+                                        <a href="#">Xem thêm</a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
@@ -212,134 +199,42 @@
                             <div class="slide-tour slick-initialized slick-slider">
 
                                 <div aria-live="polite" class="slick-list draggable">
-                                    <div class="slick-track" role="listbox" style="opacity: 1; width: 927px; transform: translate3d(0px, 0px, 0px);">
-                                        <div class="item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 309px;">
+                                    <div class="slick-track">
+                                       @foreach (var item in ListProduct.Take(6))
+                                       {
+
+                                        <div class="item slick-slide slick-current slick-active col-md-4"  data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="margin-bottom:10px;">
                                             <div class="item-tour">
                                                 <div class="i-img">
-                                                    <a href="https://dulichvietnam.com.vn/tour/tour-du-lich-bali-4-ngay-gia-re-khoi-hanh-tu-ha-noi.html" title="Hà Nội - Bali 4N3Đ Bay Vietjet Air" tabindex="0">
-                                                        <img src="https://dulichvietnam.com.vn/tour/vnt_upload/tour/04_2022/thumbs/380_crop_ubud.jpg" alt="Hà Nội - Bali 4N3Đ Bay Vietjet Air">
-                                                        <span class="i-address">Indonesia</span>
+                                                    <a href="/home/tourDescription/@item.Id" title="#" tabindex="0">
+                                                        <img src="@item.Logo" alt="@item.Logo">
+                                                        <span class="i-address">@item.PlaceName</span>
                                                     </a>
                                                 </div>
                                                 <div class="i-desc">
                                                     <div class="i-title">
-                                                        <h3><a href="https://dulichvietnam.com.vn/tour/tour-du-lich-bali-4-ngay-gia-re-khoi-hanh-tu-ha-noi.html" tabindex="0">Hà Nội - Bali 4N3Đ Bay Vietjet Air</a></h3>
+                                                        <h3><a href="/home/tourDescription/@item.Id" tabindex="0">@item.Name</a></h3>
                                                     </div>
                                                     <div class="mb5 text-overflow">
-                                                        <div class="i-price">9,590,000  đ</div>
-
+                                                        <div class="i-price">@double.Parse(item.Price.ToString()).ToString("#,##0")  đ </div>
                                                     </div>
                                                     <div class="i-content">
-                                                        <div class="text-overflow"><strong>Loại hình:</strong> Tour lẻ ghép đường bay</div>
-                                                        <div class="text-overflow"><strong>Điểm đến:</strong> Indonesia</div>
-                                                        <div class="text-overflow"><strong>Địa danh:</strong> Tour thiên đường biển đảo Bali</div>
-                                                        <div class="text-overflow"><strong>Thời gian:</strong> 4 Ngày</div>
-                                                        <div class="text-overflow"><strong>Ghi chú:</strong> Hằng ngày</div>
-
-                                                        <div class="i-right" style="display:none">
-                                                            <div class="i-icon">
-                                                                <ul>
-                                                                    <li title="Máy bay"><i class="fa fa-plane"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><div class="item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 309px;">
-                                            <div class="item-tour">
-                                                <div class="i-img">
-                                                    <a href="https://dulichvietnam.com.vn/tour/tour-du-lich-bali-4-ngay-khoi-hanh-tu-ho-chi-minh-gia-uu-dai.html" title="HCM - Bali 4N3Đ, VMB + KS 5* - Tour 5 Sao" tabindex="0">
-                                                        <img src="https://dulichvietnam.com.vn/tour/vnt_upload/tour/08_2019/thumbs/380_crop_tour-du-lich-bali-4-ngay.jpg" alt="HCM - Bali 4N3Đ, VMB + KS 5* - Tour 5 Sao">
-                                                        <span class="i-address">Indonesia</span>
-                                                    </a>
-                                                </div>
-                                                <div class="i-desc">
-                                                    <div class="i-title">
-                                                        <h3><a href="https://dulichvietnam.com.vn/tour/tour-du-lich-bali-4-ngay-khoi-hanh-tu-ho-chi-minh-gia-uu-dai.html" tabindex="0">HCM - Bali 4N3Đ, VMB + KS 5* - Tour 5 Sao</a></h3>
-                                                    </div>
-                                                    <div class="mb5 text-overflow">
-                                                        <div class="i-price">10,590,000  đ</div>
-
-                                                    </div>
-                                                    <div class="i-content">
-                                                        <div class="text-overflow"><strong>Loại hình:</strong> Tour lẻ ghép đường bay</div>
-                                                        <div class="text-overflow"><strong>Điểm đến:</strong> Indonesia</div>
-                                                        <div class="text-overflow"><strong>Địa danh:</strong> Tour thiên đường biển đảo Bali</div>
-                                                        <div class="text-overflow"><strong>Thời gian:</strong> 4 Ngày</div>
-                                                        <div class="text-overflow"><strong>Ghi chú:</strong> Hằng ngày</div>
-
-                                                        <div class="i-right" style="display:none">
-                                                            <div class="i-icon">
-                                                                <ul>
-                                                                    <li title="Máy bay"><i class="fa fa-plane"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><div class="item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 309px;">
-                                            <div class="item-tour">
-                                                <div class="i-img">
-                                                    <a href="https://dulichvietnam.com.vn/tour/tour-bali-4-ngay-khoi-hanh-tu-hai-phong-gia-tot.html" title="Hải Phòng - Hà Nội - Bali 4N3Đ, VMB + KS 4*" tabindex="0">
-                                                        <img src="https://dulichvietnam.com.vn/tour/vnt_upload/tour/03_2020/thumbs/380_crop_Bali_Indo_5.jpg" alt="Hải Phòng - Hà Nội - Bali 4N3Đ, VMB + KS 4*">
-                                                        <span class="i-address">Indonesia</span>
-                                                    </a>
-                                                </div>
-                                                <div class="i-desc">
-                                                    <div class="i-title">
-                                                        <h3><a href="https://dulichvietnam.com.vn/tour/tour-bali-4-ngay-khoi-hanh-tu-hai-phong-gia-tot.html" tabindex="0">Hải Phòng - Hà Nội - Bali 4N3Đ, VMB + KS 4*</a></h3>
-                                                    </div>
-                                                    <div class="mb5 text-overflow">
-                                                        <div class="i-price">11,690,000  đ</div>
-
-                                                    </div>
-                                                    <div class="i-content">
-                                                        <div class="text-overflow"><strong>Loại hình:</strong> Tour lẻ ghép đường bay</div>
-                                                        <div class="text-overflow"><strong>Điểm đến:</strong> Indonesia</div>
-                                                        <div class="text-overflow"><strong>Địa danh:</strong> Tour thiên đường biển đảo Bali</div>
-                                                        <div class="text-overflow"><strong>Thời gian:</strong> 4 Ngày</div>
-                                                        <div class="text-overflow"><strong>Ghi chú:</strong> Hằng ngày</div>
-
-                                                        <div class="i-right" style="display:none">
-                                                            <div class="i-icon">
-                                                                <ul>
-                                                                    <li title="Máy bay"><i class="fa fa-plane"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                                        <div class="text-overflow"><strong>Loại hình:</strong> @item.CategoryName</div>
+                                                        <div class="text-overflow"><strong>Điểm đến:</strong> @item.DeparturePoint</div>
+                                                        <div class="text-overflow"><strong>Địa danh:</strong> @item.Destination</div>
+                                                        <div class="text-overflow"><strong>Thời gian:</strong> @item.Time</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                       }
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
-
-        
-
-        
-
     </div>
-
-
-
-
-
-   
-
-
 </div>
