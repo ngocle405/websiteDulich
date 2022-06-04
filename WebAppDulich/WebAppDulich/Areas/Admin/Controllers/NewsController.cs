@@ -13,7 +13,7 @@ using WebAppDulich.Services;
 namespace WebAppDulich.Areas.Admin.Controllers
 {
     [Area("admin")]
-    public class NewsController : Controller
+    public class NewsController : CheckLoginController
     {
         private readonly INewsService _newsService;
         private readonly ICategoryNewService _categoryNewsService;

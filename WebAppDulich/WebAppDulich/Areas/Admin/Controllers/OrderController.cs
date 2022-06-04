@@ -10,7 +10,7 @@ using WebAppDulich.Services;
 namespace WebAppDulich.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class OrderController : Controller
+    public class OrderController : CheckLoginController
     {
         private IOrderService _orderService;
         public OrderController(IOrderService orderService)

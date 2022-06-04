@@ -12,7 +12,7 @@ using WebAppDulich.Services;
 namespace WebAppDulich.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class TourController : Controller
+    public class TourController : CheckLoginController
     {
         private ITourService _tourService;
         private ICategoryService _categoryService;

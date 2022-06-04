@@ -10,7 +10,7 @@ using WebAppDulich.Services;
 namespace WebAppDulich.Areas.Admin.Controllers
 {
    [Area("admin")]
-    public class SlideController : Controller
+    public class SlideController : CheckLoginController
     {
         private readonly ISlideService _slideService;
 

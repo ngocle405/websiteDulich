@@ -277,3 +277,4 @@ C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Deb
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Areas\Admin\Views\Order\Edit.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\News.cshtml.g.cs
 C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Views\Home\NewDescription.cshtml.g.cs
+C:\Users\Administrator\Documents\websiteDulich\WebAppDulich\WebAppDulich\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Login.cshtml.g.cs

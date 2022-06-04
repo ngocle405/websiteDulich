@@ -9,7 +9,7 @@ using WebAppDulich.Services;
 namespace WebAppDulich.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController : Controller
+    public class CategoryController : CheckLoginController
     {
         private readonly ICategoryService _categoryService;
 

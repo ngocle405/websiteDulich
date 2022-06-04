@@ -10,7 +10,7 @@ using WebAppDulich.Services;
 namespace WebAppDulich.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class PlaceController : Controller
+    public class PlaceController : CheckLoginController
     {
         private IPlaceService _placeService;
         public PlaceController(IPlaceService placeService)
